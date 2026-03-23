@@ -10,18 +10,6 @@ const FooterSection = () => {
             <span className="font-serif text-white text-lg tracking-wide">Южный Берег Капитала</span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            {['Аналитика', 'Налоги', 'Калькулятор', 'О нас'].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="font-sans text-white/40 text-sm hover:text-white/70 transition-colors duration-200"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
-
           <a
             href="https://t.me/"
             target="_blank"
