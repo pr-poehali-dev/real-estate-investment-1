@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="section-divider" />
-            <span className="font-sans tracking-[0.15em] uppercase text-orange-100 text-[0.94rem]">Краснодар · Сочи · Анапа · Крым</span>
+            <span className="font-sans text-sm tracking-[0.15em] uppercase text-orange-100">Краснодар · Сочи · Анапа · Крым</span>
           </div>
 
           <h1 className="font-serif text-white mb-6">
@@ -45,8 +45,9 @@ const HeroSection = () => {
             <span className="block text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
               недвижимость
             </span>
-            <span className="block md:text-5xl lg:text-6xl leading-tight italic mt-1 font-black text-orange-100 text-3xl">Краснодар · Сочи · Анапа · Крым
-</span>
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-[#9d8857] italic mt-1">
+              на юге
+            </span>
           </h1>
 
           <p className="font-sans text-white/80 text-base md:text-lg mb-4 max-w-xl leading-relaxed">
