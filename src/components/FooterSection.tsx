@@ -7,7 +7,7 @@ const FooterSection = () => {
             <div className="w-7 h-7 rounded-full border border-[#9d8857] flex items-center justify-center">
               <div className="w-2.5 h-2.5 rounded-full bg-[#9d8857]" />
             </div>
-            <span className="font-serif text-white text-lg tracking-wide">ЮгИнвест</span>
+            <span className="font-serif text-white text-lg tracking-wide">Южный Берег Капитала</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6">

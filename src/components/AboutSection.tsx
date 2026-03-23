@@ -84,10 +84,8 @@ const AboutSection = () => {
         {/* Bonuses */}
         <div className="bg-[#2a2218] rounded-2xl p-8 md:p-12">
           <div className="text-center mb-10">
-            <h3 className="font-serif text-3xl md:text-4xl text-white font-light mb-3">
-              Материалы в подарок
-            </h3>
-            <p className="font-sans text-white/50 text-sm">Бесплатно при подписке на канал</p>
+            <h3 className="font-serif text-3xl md:text-4xl text-white font-light mb-3">Что еще важно знать?</h3>
+            <p className="font-sans text-white/50 text-sm">Рекомендуем ознакомиться с этими материалами, прежде чем принимать решение о покупке</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
             {bonuses.map((b) => (

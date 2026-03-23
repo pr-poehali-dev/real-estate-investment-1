@@ -20,7 +20,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-cream texture-bg">
+    <section className="md:py-28 bg-cream texture-bg py-28">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -28,9 +28,7 @@ const FeaturesSection = () => {
             <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Что вы получаете</span>
             <div className="w-14 h-0.5 bg-gradient-to-l from-[#9d8857] to-transparent" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#2a2218] font-light">
-            Честный канал об инвестициях
-          </h2>
+          <h2 className="font-serif text-4xl md:text-5xl text-[#2a2218] font-light">Честный канал об инвестициях в недвижимость</h2>
           <p className="font-sans text-[#2a2218]/60 mt-4 text-base max-w-xl mx-auto">
             Только реальные цифры, проверенные кейсы и работающие стратегии
           </p>

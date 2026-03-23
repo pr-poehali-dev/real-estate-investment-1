@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="w-8 h-8 rounded-full border border-[#9d8857] flex items-center justify-center">
             <div className="w-3 h-3 rounded-full bg-[#9d8857]" />
           </div>
-          <span className="font-serif text-white text-lg tracking-wide">ЮгИнвест</span>
+          <span className="font-serif text-white text-lg tracking-wide">Южный Берег Капитала</span>
         </div>
         <a
           href="https://t.me/"
