@@ -46,8 +46,8 @@ const levels = [
     tag: 'Крупные',
     budget: 'Бюджет от 30 млн ₽',
     icon: 'Gem',
-    bg: 'bg-[#2a2218]',
-    accentColor: '#9d8857',
+    bg: 'bg-[#3d2e1e]',
+    accentColor: '#c4a96a',
     headline: 'Для крупных инвесторов',
     pains: [
       'Капитал есть, но инфляция съедает?',
@@ -100,7 +100,7 @@ const InvestorLevels = () => {
         return (
           <div key={idx}>
             {idx === 2 && (
-              <div className="h-24 bg-gradient-to-b from-[#eef2ee] to-[#2a2218]" />
+              <div className="h-24 bg-gradient-to-b from-[#eef2ee] to-[#3d2e1e]" />
             )}
           <div className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}>
             <div className="max-w-6xl mx-auto">
