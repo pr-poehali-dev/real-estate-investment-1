@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <div className="flex items-center gap-3 mb-6">
             <div className="section-divider" />
-            <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Инвестиции · Юг России</span>
+            <span className="font-sans text-sm tracking-[0.15em] uppercase text-orange-100">Краснодар · Сочи · Анапа · Крым</span>
           </div>
 
           <h1 className="font-serif text-white mb-6">
@@ -53,9 +53,7 @@ const HeroSection = () => {
           <p className="font-sans text-white/80 text-base md:text-lg mb-4 max-w-xl leading-relaxed">
             Честный разбор. Реальные цифры, кейсы, налоговые лайфхаки.
           </p>
-          <p className="font-sans text-white/60 text-sm md:text-base mb-10 max-w-lg leading-relaxed">
-            Краснодар · Сочи · Анапа · Крым
-          </p>
+          <p className="font-sans text-white/60 text-sm md:text-base mb-10 max-w-lg leading-relaxed"></p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
