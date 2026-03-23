@@ -101,7 +101,6 @@ const InvestorLevels = () => {
           <div key={idx}>
           <div
             className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}
-            style={idx === 1 ? { background: 'linear-gradient(to bottom, #eef2ee 70%, #3d2e1e 100%)' } : undefined}
           >
             <div className="max-w-6xl mx-auto">
 
