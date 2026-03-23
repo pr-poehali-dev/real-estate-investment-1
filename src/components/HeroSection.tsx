@@ -45,7 +45,7 @@ const HeroSection = () => {
             <span className="block text-5xl md:text-6xl lg:text-7xl font-light leading-tight">
               недвижимость
             </span>
-            <span className="block md:text-5xl lg:text-6xl leading-tight italic mt-1 text-2xl font-black text-orange-100">Краснодар · Сочи · Анапа · Крым
+            <span className="block md:text-5xl lg:text-6xl leading-tight italic mt-1 font-black text-orange-100 text-3xl">Краснодар · Сочи · Анапа · Крым
 </span>
           </h1>
 
