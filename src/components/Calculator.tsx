@@ -63,10 +63,10 @@ const Calculator = () => {
   const sliderProgress = ((budget - 6_000_000) / (100_000_000 - 6_000_000)) * 100;
 
   return (
-    <section id="calculator" className="py-12 md:py-28 bg-white">
+    <section id="calculator" className="py-10 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-12">
-        <div className="text-center mb-8 md:mb-14">
-          <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="text-center mb-6 md:mb-10">
+          <div className="flex items-center justify-center gap-3 mb-3">
             <div className="section-divider" />
             <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Инструмент</span>
             <div className="w-14 h-0.5 bg-gradient-to-l from-[#9d8857] to-transparent" />
@@ -74,17 +74,17 @@ const Calculator = () => {
           <h2 className="font-serif text-3xl md:text-5xl text-[#2a2218] font-light">
             Калькулятор доходности
           </h2>
-          <p className="font-sans text-[#2a2218]/60 mt-3 text-sm max-w-md mx-auto">
+          <p className="font-sans text-[#2a2218]/60 mt-2 text-sm max-w-md mx-auto">
             Рассчитайте реальную доходность вашей инвестиции с учётом роста стоимости и налогов
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 md:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 items-start">
           {/* Inputs */}
-          <div className="lg:col-span-3 space-y-5 md:space-y-7">
+          <div className="lg:col-span-3 space-y-4">
             {/* Budget */}
             <div>
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-2">
                 <label className="font-sans text-sm text-[#2a2218]/80 font-medium">Бюджет инвестиции</label>
                 <span className="font-serif text-[#9d8857] text-lg">{formatMoney(budget)}</span>
               </div>
@@ -108,7 +108,7 @@ const Calculator = () => {
 
             {/* Property type */}
             <div>
-              <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-3">Тип объекта</label>
+              <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-2">Тип объекта</label>
               <div className="grid grid-cols-3 gap-2">
                 {propertyTypes.map((pt) => (
                   <button
@@ -136,7 +136,7 @@ const Calculator = () => {
 
             {/* Location */}
             <div>
-              <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-3">Локация</label>
+              <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-2">Локация</label>
               <div className="flex flex-wrap gap-2">
                 {locations.map((loc) => (
                   <button
@@ -156,7 +156,7 @@ const Calculator = () => {
 
             {/* Horizon */}
             <div>
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-2">
                 <label className="font-sans text-sm text-[#2a2218]/80 font-medium">Горизонт инвестирования</label>
                 <span className="font-serif text-[#9d8857] text-lg">{years} {years === 1 ? 'год' : years < 5 ? 'года' : 'лет'}</span>
               </div>

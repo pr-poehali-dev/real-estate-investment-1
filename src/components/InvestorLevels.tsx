@@ -93,19 +93,19 @@ const InvestorLevels = () => {
         const textSub = isDark ? 'text-white/75' : 'text-[#2a2218]/75';
         const cardBg = isDark ? 'bg-white/8 border-white/12' : 'bg-white border-[#e3dad2]';
         const cardHover = isDark ? 'hover:border-[#9d8857]/50' : 'hover:border-[#9d8857]/50 hover:shadow-md';
-        const pillBg = isDark ? 'bg-white/10 text-white/60' : 'bg-[#e3dad2]/70 text-[#2a2218]/60';
+        const pillBg = isDark ? 'bg-[#c4a96a] text-[#2a2218] font-medium' : 'bg-[#9d8857] text-white font-medium';
         const ctaBg = isDark ? 'bg-white/10 border-white/15' : 'bg-white border-[#e3dad2]';
         const dotBorder = isDark ? 'border-[#9d8857]/60' : 'border-[#9d8857]/40';
 
         return (
           <div key={idx}>
           <div
-            className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}
+            className={`${level.bg} py-10 md:py-14 px-6 md:px-12`}
           >
             <div className="max-w-6xl mx-auto">
 
               {/* Level header */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
                 <div className="flex items-center gap-4">
                   <span className="font-serif text-6xl md:text-7xl leading-none" style={{ color: level.accentColor, opacity: 0.2 }}>
                     {level.num}
@@ -127,11 +127,11 @@ const InvestorLevels = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 {/* Left: pains + cta */}
-                <div className={`rounded-2xl p-7 border ${ctaBg}`}>
-                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-5 ${textMuted}`}>Это про вас?</p>
-                  <ul className="space-y-4 mb-7">
+                <div className={`rounded-2xl p-5 border ${ctaBg}`}>
+                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-4 ${textMuted}`}>Это про вас?</p>
+                  <ul className="space-y-3 mb-5">
                     {level.pains.map((p, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <div className={`w-5 h-5 rounded-full border flex items-center justify-center mt-0.5 flex-shrink-0 ${dotBorder}`}>
