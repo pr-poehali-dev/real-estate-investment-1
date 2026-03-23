@@ -98,7 +98,11 @@ const InvestorLevels = () => {
         const dotBorder = isDark ? 'border-[#9d8857]/60' : 'border-[#9d8857]/40';
 
         return (
-          <div key={idx} className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}>
+          <div key={idx}>
+            {idx === 2 && (
+              <div className="h-24 bg-gradient-to-b from-[#eef2ee] to-[#2a2218]" />
+            )}
+          <div className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}>
             <div className="max-w-6xl mx-auto">
 
               {/* Level header */}
@@ -193,6 +197,7 @@ const InvestorLevels = () => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         );
       })}
