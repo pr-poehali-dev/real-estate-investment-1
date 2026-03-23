@@ -99,10 +99,10 @@ const InvestorLevels = () => {
 
         return (
           <div key={idx}>
-            {idx === 2 && (
-              <div className="h-24 bg-gradient-to-b from-[#eef2ee] to-[#3d2e1e]" />
-            )}
-          <div className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}>
+          <div
+            className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}
+            style={idx === 1 ? { background: 'linear-gradient(to bottom, #eef2ee 70%, #3d2e1e 100%)' } : undefined}
+          >
             <div className="max-w-6xl mx-auto">
 
               {/* Level header */}
@@ -200,6 +200,7 @@ const InvestorLevels = () => {
           </div>
           </div>
         );
+
       })}
     </section>
   );
