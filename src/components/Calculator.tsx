@@ -109,24 +109,26 @@ const Calculator = () => {
             {/* Property type */}
             <div>
               <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-3">Тип объекта</label>
-              <div className="grid grid-cols-3 gap-2 md:gap-3">
+              <div className="grid grid-cols-3 gap-2">
                 {propertyTypes.map((pt) => (
                   <button
                     key={pt.value}
                     onClick={() => setPropType(pt.value)}
-                    className={`flex flex-col items-center gap-1.5 p-3 md:p-4 rounded-xl border text-center transition-all duration-200 ${
+                    className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-left transition-all duration-200 ${
                       propType === pt.value
                         ? 'border-[#9d8857] bg-[#9d8857]/8 shadow-sm'
                         : 'border-[#e3dad2] bg-[#f7f3ef] hover:border-[#9d8857]/40'
                     }`}
                   >
-                    <Icon name={pt.icon} size={16} className={propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/50'} />
-                    <span className={`font-sans text-xs leading-tight ${propType === pt.value ? 'text-[#9d8857] font-medium' : 'text-[#2a2218]/60'}`}>
-                      {pt.label}
-                    </span>
-                    <span className={`font-sans text-xs ${propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/40'}`}>
-                      ~{pt.yield}%/год
-                    </span>
+                    <Icon name={pt.icon} size={14} className={`flex-shrink-0 ${propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/50'}`} />
+                    <div className="min-w-0">
+                      <div className={`font-sans text-xs leading-tight truncate ${propType === pt.value ? 'text-[#9d8857] font-medium' : 'text-[#2a2218]/60'}`}>
+                        {pt.label}
+                      </div>
+                      <div className={`font-sans text-xs ${propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/40'}`}>
+                        ~{pt.yield}%/год
+                      </div>
+                    </div>
                   </button>
                 ))}
               </div>
