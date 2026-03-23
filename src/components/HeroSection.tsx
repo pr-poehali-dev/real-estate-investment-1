@@ -81,7 +81,7 @@ const HeroSection = () => {
         <div className="max-w-5xl mx-auto px-6 md:px-12 py-6 grid grid-cols-3 gap-4">
           {[
             { value: '10 лет', label: 'на рынке юга' },
-            { value: '15–29%', label: 'сэкономим на налогах' },
+            { value: '15–29%', label: 'экономия на налогах' },
             { value: '1 млн/мес', label: 'пассивный доход' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
