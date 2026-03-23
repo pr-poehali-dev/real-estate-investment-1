@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const levels = [
   {
+    num: '01',
     tag: 'Начинающие',
-    budget: '1–15 млн ₽',
+    budget: 'Бюджет 1–15 млн ₽',
     icon: 'Sprout',
-    color: '#9d8857',
-    colorLight: '#9d885715',
+    bg: 'bg-[#f7f3ef]',
+    accentColor: '#9d8857',
     headline: 'Для начинающих и семейных инвестиций',
     pains: [
       'Мечтаете о квартире у моря?',
@@ -22,11 +22,12 @@ const levels = [
     ],
   },
   {
+    num: '02',
     tag: 'Опытные',
-    budget: '15–30 млн ₽',
+    budget: 'Бюджет 15–30 млн ₽',
     icon: 'TrendingUp',
-    color: '#3e563f',
-    colorLight: '#3e563f15',
+    bg: 'bg-[#eef2ee]',
+    accentColor: '#3e563f',
     headline: 'Для опытных инвесторов',
     pains: [
       'Квартиры есть, доходность 5–7% перестала радовать?',
@@ -41,11 +42,12 @@ const levels = [
     ],
   },
   {
+    num: '03',
     tag: 'Крупные',
-    budget: 'от 30 млн ₽',
+    budget: 'Бюджет от 30 млн ₽',
     icon: 'Gem',
-    color: '#7a6040',
-    colorLight: '#7a604015',
+    bg: 'bg-[#2a2218]',
+    accentColor: '#9d8857',
     headline: 'Для крупных инвесторов',
     pains: [
       'Капитал есть, но инфляция съедает?',
@@ -62,13 +64,11 @@ const levels = [
 ];
 
 const InvestorLevels = () => {
-  const [active, setActive] = useState(0);
-  const level = levels[active];
-
   return (
-    <section className="py-20 md:py-28 bg-[#f7f3ef] texture-dots">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-14">
+    <section>
+      {/* Section header */}
+      <div className="bg-[#f7f3ef] texture-dots pt-20 md:pt-28 pb-12 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="section-divider" />
             <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Кому будет полезен канал</span>
@@ -83,91 +83,119 @@ const InvestorLevels = () => {
             На квартирах, коммерции и отелях в Сочи, Краснодаре, Анапе и Крыму
           </p>
         </div>
-
-        {/* Tabs */}
-        <div className="flex flex-col sm:flex-row gap-3 mb-10 justify-center">
-          {levels.map((l, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className={`flex items-center gap-3 px-6 py-3 rounded-full font-sans text-sm transition-all duration-300 border ${
-                active === i
-                  ? 'bg-[#9d8857] text-white border-[#9d8857] shadow-md'
-                  : 'bg-white text-[#2a2218]/70 border-[#e3dad2] hover:border-[#9d8857]/40'
-              }`}
-            >
-              <Icon name={l.icon} size={16} />
-              <span>{l.tag}</span>
-              <span className={`text-xs px-2 py-0.5 rounded-full ${active === i ? 'bg-white/20 text-white' : 'bg-[#e3dad2] text-[#9d8857]'}`}>
-                {l.budget}
-              </span>
-            </button>
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          {/* Left: pains + cta */}
-          <div className="bg-white rounded-2xl p-8 md:p-10 border border-[#e3dad2] shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center"
-                style={{ backgroundColor: level.colorLight }}
-              >
-                <Icon name={level.icon} size={20} style={{ color: level.color }} />
-              </div>
-              <h3 className="font-serif text-xl text-[#2a2218] font-light">{level.headline}</h3>
-            </div>
-
-            <ul className="space-y-3 mb-8">
-              {level.pains.map((p, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full border border-[#9d8857]/40 flex items-center justify-center mt-0.5 flex-shrink-0">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#9d8857]" />
-                  </div>
-                  <span className="font-sans text-[#2a2218]/70 text-sm leading-relaxed">{p}</span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="font-sans text-[#2a2218]/80 text-sm leading-relaxed bg-[#f7f3ef] rounded-xl p-4 border border-[#e3dad2]">
-              {level.cta}
-            </p>
-          </div>
-
-          {/* Right: posts */}
-          <div className="space-y-4">
-            <p className="font-sans text-[#2a2218]/50 text-xs tracking-[0.12em] uppercase mb-5">
-              Начните с материалов в канале:
-            </p>
-            {level.posts.map((post, i) => (
-              <a
-                key={i}
-                href="https://t.me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-4 bg-white rounded-xl p-5 border border-[#e3dad2] hover:border-[#9d8857]/50 hover:shadow-md transition-all duration-300 group"
-              >
-                <div className="w-8 h-8 rounded-lg bg-[#9d8857]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#9d8857]/20 transition-colors">
-                  <span className="font-serif text-[#9d8857] text-sm font-light">0{i + 1}</span>
-                </div>
-                <span className="font-sans text-[#2a2218]/75 text-sm leading-relaxed group-hover:text-[#2a2218] transition-colors">{post}</span>
-                <Icon name="ArrowRight" size={16} className="text-[#9d8857]/40 group-hover:text-[#9d8857] transition-colors flex-shrink-0 mt-0.5" />
-              </a>
-            ))}
-
-            <a
-              href="https://t.me/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full mt-6 bg-[#9d8857] text-white font-sans text-sm px-6 py-4 rounded-full hover:bg-[#b8a06e] transition-colors duration-300 shadow-md"
-            >
-              Перейти в TG-канал
-              <Icon name="ArrowRight" size={16} />
-            </a>
-          </div>
-        </div>
       </div>
+
+      {/* Three level blocks */}
+      {levels.map((level, idx) => {
+        const isDark = idx === 2;
+        const textMain = isDark ? 'text-white' : 'text-[#2a2218]';
+        const textMuted = isDark ? 'text-white/55' : 'text-[#2a2218]/55';
+        const textSub = isDark ? 'text-white/75' : 'text-[#2a2218]/75';
+        const cardBg = isDark ? 'bg-white/8 border-white/12' : 'bg-white border-[#e3dad2]';
+        const cardHover = isDark ? 'hover:border-[#9d8857]/50' : 'hover:border-[#9d8857]/50 hover:shadow-md';
+        const pillBg = isDark ? 'bg-white/10 text-white/60' : 'bg-[#e3dad2]/70 text-[#2a2218]/60';
+        const ctaBg = isDark ? 'bg-white/10 border-white/15' : 'bg-white border-[#e3dad2]';
+        const dotBorder = isDark ? 'border-[#9d8857]/60' : 'border-[#9d8857]/40';
+
+        return (
+          <div key={idx} className={`${level.bg} py-14 md:py-20 px-6 md:px-12`}>
+            <div className="max-w-6xl mx-auto">
+
+              {/* Level header */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
+                <div className="flex items-center gap-4">
+                  <span className="font-serif text-6xl md:text-7xl leading-none" style={{ color: level.accentColor, opacity: 0.2 }}>
+                    {level.num}
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <Icon name={level.icon} size={18} style={{ color: level.accentColor }} />
+                      <span className="font-sans text-sm font-medium" style={{ color: level.accentColor }}>
+                        {level.tag}
+                      </span>
+                    </div>
+                    <h3 className={`font-serif text-2xl md:text-3xl font-light leading-tight ${textMain}`}>
+                      {level.headline}
+                    </h3>
+                  </div>
+                </div>
+                <div className={`sm:ml-auto font-sans text-xs px-4 py-1.5 rounded-full flex-shrink-0 ${pillBg}`}>
+                  {level.budget}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                {/* Left: pains + cta */}
+                <div className={`rounded-2xl p-7 border ${ctaBg}`}>
+                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-5 ${textMuted}`}>Это про вас?</p>
+                  <ul className="space-y-4 mb-7">
+                    {level.pains.map((p, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center mt-0.5 flex-shrink-0 ${dotBorder}`}>
+                          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: level.accentColor }} />
+                        </div>
+                        <span className={`font-sans text-sm leading-relaxed ${textSub}`}>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className={`font-sans text-sm leading-relaxed ${textSub} border-t pt-5 ${isDark ? 'border-white/10' : 'border-[#e3dad2]'}`}>
+                    {level.cta}
+                  </p>
+                </div>
+
+                {/* Right: posts */}
+                <div>
+                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-5 ${textMuted}`}>
+                    Начните с материалов в канале:
+                  </p>
+                  <div className="space-y-3">
+                    {level.posts.map((post, i) => (
+                      <a
+                        key={i}
+                        href="https://t.me/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`flex items-start gap-4 rounded-xl p-4 border transition-all duration-300 group ${cardBg} ${cardHover}`}
+                      >
+                        <div
+                          className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
+                          style={{ backgroundColor: `${level.accentColor}18` }}
+                        >
+                          <span className="font-serif text-sm font-light" style={{ color: level.accentColor }}>
+                            {i + 1}
+                          </span>
+                        </div>
+                        <span className={`font-sans text-sm leading-relaxed flex-1 ${textSub} group-hover:${isDark ? 'text-white' : 'text-[#2a2218]'} transition-colors`}>
+                          {post}
+                        </span>
+                        <Icon
+                          name="ArrowRight"
+                          size={15}
+                          className="flex-shrink-0 mt-0.5 opacity-30 group-hover:opacity-80 transition-opacity"
+                          style={{ color: level.accentColor }}
+                        />
+                      </a>
+                    ))}
+                  </div>
+
+                  <a
+                    href="https://t.me/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full mt-5 font-sans text-sm px-6 py-3.5 rounded-full transition-colors duration-300"
+                    style={{ backgroundColor: level.accentColor, color: 'white' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.85')}
+                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+                  >
+                    Перейти в TG-канал
+                    <Icon name="ArrowRight" size={15} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
     </section>
   );
 };
