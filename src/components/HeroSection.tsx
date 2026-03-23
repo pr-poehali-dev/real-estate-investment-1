@@ -57,7 +57,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://t.me/"
+              href="https://t.me/+Oikjo-gGhtxiZjZi"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#9d8857] text-white font-sans text-sm tracking-wide px-8 py-4 rounded-full hover:bg-[#b8a06e] transition-all duration-300 shadow-lg"
