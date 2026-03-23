@@ -10,11 +10,11 @@ const propertyTypes: { value: PropertyType; label: string; icon: string; yield: 
 ];
 
 const locations = [
-  { value: 'krasnodar', label: 'Краснодар', growth: 8 },
-  { value: 'sochi', label: 'Сочи', growth: 12 },
-  { value: 'anapa', label: 'Анапа', growth: 10 },
-  { value: 'crimea', label: 'Крым', growth: 9 },
-  { value: 'novorossiysk', label: 'Новороссийск', growth: 7 },
+  { value: 'krasnodar', label: 'Краснодар', growth: 4 },
+  { value: 'sochi', label: 'Сочи', growth: 6 },
+  { value: 'anapa', label: 'Анапа', growth: 5 },
+  { value: 'crimea', label: 'Крым', growth: 4.5 },
+  { value: 'novorossiysk', label: 'Новороссийск', growth: 3.5 },
 ];
 
 const formatMoney = (n: number) => {
@@ -23,7 +23,7 @@ const formatMoney = (n: number) => {
 };
 
 const Calculator = () => {
-  const [budget, setBudget] = useState(5_000_000);
+  const [budget, setBudget] = useState(6_000_000);
   const [propType, setPropType] = useState<PropertyType>('apartment');
   const [location, setLocation] = useState('sochi');
   const [years, setYears] = useState(5);
@@ -60,26 +60,28 @@ const Calculator = () => {
     };
   }, [budget, propType, location, years, taxOptimize]);
 
+  const sliderProgress = ((budget - 6_000_000) / (100_000_000 - 6_000_000)) * 100;
+
   return (
-    <section id="calculator" className="py-20 md:py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-14">
+    <section id="calculator" className="py-12 md:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4 md:px-12">
+        <div className="text-center mb-8 md:mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="section-divider" />
             <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Инструмент</span>
             <div className="w-14 h-0.5 bg-gradient-to-l from-[#9d8857] to-transparent" />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#2a2218] font-light">
+          <h2 className="font-serif text-3xl md:text-5xl text-[#2a2218] font-light">
             Калькулятор доходности
           </h2>
-          <p className="font-sans text-[#2a2218]/60 mt-4 text-sm max-w-md mx-auto">
+          <p className="font-sans text-[#2a2218]/60 mt-3 text-sm max-w-md mx-auto">
             Рассчитайте реальную доходность вашей инвестиции с учётом роста стоимости и налогов
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 md:gap-8 items-start">
           {/* Inputs */}
-          <div className="lg:col-span-3 space-y-7">
+          <div className="lg:col-span-3 space-y-5 md:space-y-7">
             {/* Budget */}
             <div>
               <div className="flex items-center justify-between mb-3">
@@ -88,18 +90,18 @@ const Calculator = () => {
               </div>
               <input
                 type="range"
-                min={1_000_000}
+                min={6_000_000}
                 max={100_000_000}
                 step={500_000}
                 value={budget}
                 onChange={(e) => setBudget(Number(e.target.value))}
                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
                 style={{
-                  background: `linear-gradient(to right, #9d8857 ${((budget - 1_000_000) / 99_000_000) * 100}%, #e3dad2 0%)`,
+                  background: `linear-gradient(to right, #9d8857 ${sliderProgress}%, #e3dad2 0%)`,
                 }}
               />
               <div className="flex justify-between mt-1.5">
-                <span className="font-sans text-xs text-[#2a2218]/40">1 млн</span>
+                <span className="font-sans text-xs text-[#2a2218]/40">6 млн</span>
                 <span className="font-sans text-xs text-[#2a2218]/40">100 млн</span>
               </div>
             </div>
@@ -107,18 +109,18 @@ const Calculator = () => {
             {/* Property type */}
             <div>
               <label className="font-sans text-sm text-[#2a2218]/80 font-medium block mb-3">Тип объекта</label>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2 md:gap-3">
                 {propertyTypes.map((pt) => (
                   <button
                     key={pt.value}
                     onClick={() => setPropType(pt.value)}
-                    className={`flex flex-col items-center gap-2 p-4 rounded-xl border text-center transition-all duration-200 ${
+                    className={`flex flex-col items-center gap-1.5 p-3 md:p-4 rounded-xl border text-center transition-all duration-200 ${
                       propType === pt.value
                         ? 'border-[#9d8857] bg-[#9d8857]/8 shadow-sm'
                         : 'border-[#e3dad2] bg-[#f7f3ef] hover:border-[#9d8857]/40'
                     }`}
                   >
-                    <Icon name={pt.icon} size={18} className={propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/50'} />
+                    <Icon name={pt.icon} size={16} className={propType === pt.value ? 'text-[#9d8857]' : 'text-[#2a2218]/50'} />
                     <span className={`font-sans text-xs leading-tight ${propType === pt.value ? 'text-[#9d8857] font-medium' : 'text-[#2a2218]/60'}`}>
                       {pt.label}
                     </span>
@@ -138,7 +140,7 @@ const Calculator = () => {
                   <button
                     key={loc.value}
                     onClick={() => setLocation(loc.value)}
-                    className={`font-sans text-sm px-4 py-2 rounded-full border transition-all duration-200 ${
+                    className={`font-sans text-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border transition-all duration-200 ${
                       location === loc.value
                         ? 'bg-[#9d8857] text-white border-[#9d8857]'
                         : 'border-[#e3dad2] text-[#2a2218]/70 hover:border-[#9d8857]/40 bg-white'
@@ -161,7 +163,7 @@ const Calculator = () => {
                   <button
                     key={y}
                     onClick={() => setYears(y)}
-                    className={`flex-1 py-2.5 rounded-lg font-sans text-sm border transition-all duration-200 ${
+                    className={`flex-1 py-2 md:py-2.5 rounded-lg font-sans text-sm border transition-all duration-200 ${
                       years === y
                         ? 'bg-[#9d8857] text-white border-[#9d8857]'
                         : 'border-[#e3dad2] text-[#2a2218]/60 hover:border-[#9d8857]/40 bg-white'
@@ -189,31 +191,31 @@ const Calculator = () => {
           </div>
 
           {/* Results */}
-          <div className="lg:col-span-2 sticky top-6">
-            <div className="bg-[#2a2218] rounded-2xl p-7 text-white">
-              <div className="flex items-center gap-2 mb-6">
+          <div className="lg:col-span-2 lg:sticky lg:top-6">
+            <div className="bg-[#2a2218] rounded-2xl p-5 md:p-7 text-white">
+              <div className="flex items-center gap-2 mb-5 md:mb-6">
                 <Icon name="Calculator" size={18} className="text-[#9d8857]" />
                 <span className="font-sans text-sm text-white/60 uppercase tracking-wider">Результат</span>
               </div>
 
               {/* Main metric */}
-              <div className="bg-[#9d8857]/15 rounded-xl p-5 mb-6 text-center border border-[#9d8857]/20">
+              <div className="bg-[#9d8857]/15 rounded-xl p-4 md:p-5 mb-5 md:mb-6 text-center border border-[#9d8857]/20">
                 <div className="font-sans text-white/50 text-xs mb-2">Общая доходность за {years} лет</div>
-                <div className="font-serif text-5xl text-[#9d8857]">{results.totalReturn}%</div>
+                <div className="font-serif text-4xl md:text-5xl text-[#9d8857]">{results.totalReturn}%</div>
                 <div className="font-sans text-white/60 text-xs mt-1">{formatMoney(results.totalAfterTax)} чистый доход</div>
               </div>
 
               {/* Breakdown */}
-              <div className="space-y-3">
+              <div className="space-y-2.5 md:space-y-3">
                 {[
                   { label: 'Пассивный доход в месяц', value: formatMoney(results.monthlyRental), icon: 'Wallet' },
                   { label: 'Аренда за период', value: formatMoney(results.totalRental), icon: 'CalendarDays' },
                   { label: 'Рост стоимости объекта', value: `+${formatMoney(results.capitalGain)}`, icon: 'TrendingUp' },
                   ...(taxOptimize ? [{ label: 'Экономия на налогах', value: `+${formatMoney(results.taxSaved)}`, icon: 'BadgePercent' }] : []),
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between py-2.5 border-b border-white/8">
-                    <div className="flex items-center gap-2.5">
-                      <Icon name={item.icon} size={14} className="text-[#9d8857]/70" />
+                  <div key={i} className="flex items-center justify-between py-2 border-b border-white/8">
+                    <div className="flex items-center gap-2">
+                      <Icon name={item.icon} size={13} className="text-[#9d8857]/70" />
                       <span className="font-sans text-white/55 text-xs">{item.label}</span>
                     </div>
                     <span className="font-sans text-white text-sm font-medium">{item.value}</span>
@@ -223,7 +225,7 @@ const Calculator = () => {
 
               {taxOptimize && (
                 <div className="mt-4 bg-[#3e563f]/30 rounded-lg p-3 flex items-start gap-2">
-                  <Icon name="Info" size={14} className="text-[#9d8857] mt-0.5 flex-shrink-0" />
+                  <Icon name="Info" size={13} className="text-[#9d8857] mt-0.5 flex-shrink-0" />
                   <p className="font-sans text-white/60 text-xs leading-relaxed">
                     Налоговый режим ИП (УСН 6%) снижает ставку с 13% до 6%. Экономия за {years} лет: {formatMoney(results.taxSaved)}
                   </p>
@@ -234,7 +236,7 @@ const Calculator = () => {
                 href="https://t.me/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full mt-6 bg-[#9d8857] text-white font-sans text-sm px-6 py-3.5 rounded-full hover:bg-[#b8a06e] transition-colors duration-300"
+                className="flex items-center justify-center gap-2 w-full mt-5 md:mt-6 bg-[#9d8857] text-white font-sans text-sm px-6 py-3.5 rounded-full hover:bg-[#b8a06e] transition-colors duration-300"
               >
                 Получить персональный разбор
                 <Icon name="ArrowRight" size={15} />
@@ -244,6 +246,21 @@ const Calculator = () => {
                 * Расчёт ориентировочный. Уточняйте у эксперта.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Note about 1M entry */}
+        <div className="mt-8 md:mt-10 bg-[#f7f3ef] border border-[#e3dad2] rounded-2xl p-5 md:p-6 flex gap-4 items-start">
+          <div className="w-9 h-9 rounded-xl bg-[#9d8857]/12 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <Icon name="Lightbulb" size={18} className="text-[#9d8857]" />
+          </div>
+          <div>
+            <div className="font-sans text-sm font-medium text-[#2a2218] mb-1">Начать можно и с 1 млн рублей</div>
+            <p className="font-sans text-sm text-[#2a2218]/65 leading-relaxed">
+              При небольшом стартовом взносе пассивный доход будет символическим или нулевым — ипотечный платёж съедает аренду.
+              Но через 15–20 лет вы становитесь полноправным владельцем недвижимости стоимостью до 15 млн рублей,
+              вложив в покупку всего 1 млн. Это стратегия долгосрочного накопления, а не текущего дохода.
+            </p>
           </div>
         </div>
       </div>
