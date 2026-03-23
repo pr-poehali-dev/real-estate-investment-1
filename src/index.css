@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: calc(1rem + 0.125rem);
+  }
+
   :root {
     --background: 30 20% 97%;
     --foreground: 25 15% 18%;
@@ -57,7 +61,7 @@
     @apply bg-background text-foreground;
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
