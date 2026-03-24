@@ -24,7 +24,7 @@ const FeaturesSection = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="text-center mb-12">
           <div className="section-label justify-center">Что вы получаете</div>
-          <h2 className="text-heading" style={{ color: '#074952' }}>
+          <h2 className="text-heading" style={{ color: '#1a5c4a' }}>
             Честный канал об инвестициях<br className="hidden md:block" /> в недвижимость
           </h2>
           <p className="text-body-lg mt-4 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
@@ -41,11 +41,11 @@ const FeaturesSection = () => {
             >
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style={{ backgroundColor: '#074952' }}
+                style={{ backgroundColor: '#1a5c4a' }}
               >
                 <Icon name={f.icon} size={22} style={{ color: '#ffe1a2' }} />
               </div>
-              <h3 className="font-bold mb-3" style={{ color: '#074952', fontSize: '1.15rem' }}>{f.title}</h3>
+              <h3 className="font-bold mb-3" style={{ color: '#1a5c4a', fontSize: '1.15rem' }}>{f.title}</h3>
               <p className="text-body-lg" style={{ color: '#1a3336' }}>{f.desc}</p>
             </div>
           ))}

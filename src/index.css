@@ -7,46 +7,46 @@
 @layer base {
   :root {
     --background: 300 3% 98%;
-    --foreground: 185 85% 14%;
+    --foreground: 160 55% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 185 85% 14%;
+    --card-foreground: 160 55% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 185 85% 14%;
+    --popover-foreground: 160 55% 12%;
 
-    --primary: 185 85% 18%;
+    --primary: 160 55% 23%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 300 3% 94%;
-    --secondary-foreground: 185 85% 14%;
+    --secondary-foreground: 160 55% 12%;
 
     --muted: 300 3% 94%;
-    --muted-foreground: 185 20% 40%;
+    --muted-foreground: 160 20% 40%;
 
-    --accent: 185 85% 18%;
+    --accent: 160 55% 23%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 185 15% 88%;
-    --input: 185 15% 88%;
-    --ring: 185 85% 18%;
+    --border: 160 15% 88%;
+    --input: 160 15% 88%;
+    --ring: 160 55% 23%;
 
     --radius: 0.75rem;
 
     /* Brand colors */
-    --teal: #074952;
-    --teal-dark: #053840;
-    --teal-light: #0a6070;
+    --teal: #1a5c4a;
+    --teal-dark: #134a3a;
+    --teal-light: #22785f;
     --yellow: #ffe1a2;
     --yellow-dark: #f5c96a;
     --bg-main: #f9f8f9;
     --bg-white: #ffffff;
-    --text-dark: #074952;
-    --text-body: #2d4a4d;
-    --text-muted: #5a7a7e;
+    --text-dark: #1a5c4a;
+    --text-body: #2d4a3e;
+    --text-muted: #5a7a6e;
   }
 }
 
@@ -174,7 +174,7 @@
     background: var(--teal);
     cursor: pointer;
     border: 3px solid white;
-    box-shadow: 0 1px 6px rgba(7, 73, 82, 0.35);
+    box-shadow: 0 1px 6px rgba(26, 92, 74, 0.35);
   }
 
   input[type="range"]::-moz-range-thumb {
@@ -184,6 +184,6 @@
     background: var(--teal);
     cursor: pointer;
     border: 3px solid white;
-    box-shadow: 0 1px 6px rgba(7, 73, 82, 0.35);
+    box-shadow: 0 1px 6px rgba(26, 92, 74, 0.35);
   }
 }

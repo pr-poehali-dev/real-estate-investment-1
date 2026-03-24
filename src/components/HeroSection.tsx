@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#074952' }}>
+    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#1a5c4a' }}>
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -10,13 +10,13 @@ const HeroSection = () => {
           backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/6c6a1881-f056-4b5c-a7fb-1fc0043c5541.jpg')`,
         }}
       />
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(rgb(7 73 82 / 6%) 0%, rgba(7, 73, 82, 0.65) 50%, rgb(7 73 82 / 30%) 100%)' }} />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(245, 235, 220, 0.08) 0%, rgba(245, 235, 220, 0.55) 50%, rgba(245, 235, 220, 0.25) 100%)' }} />
 
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#ffe1a2' }}>
-            <Icon name="TrendingUp" size={16} style={{ color: '#074952' }} />
+            <Icon name="TrendingUp" size={16} style={{ color: '#1a5c4a' }} />
           </div>
           <span className="font-bold text-white" style={{ fontSize: '1.05rem' }}>
             Южный Берег Капитала
@@ -43,7 +43,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: '#ffe1a2', color: '#074952', fontSize: '0.95rem' }}
+              style={{ backgroundColor: '#ffe1a2', color: '#1a5c4a', fontSize: '0.95rem' }}
             >
               <Icon name="Send" size={16} />
               Перейти в TG-канал
