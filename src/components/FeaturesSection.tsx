@@ -27,7 +27,7 @@ const FeaturesSection = () => {
           <h2 className="text-heading" style={{ color: '#074952' }}>
             Честный канал об инвестициях<br className="hidden md:block" /> в недвижимость
           </h2>
-          <p className="text-body-lg mt-4 max-w-md mx-auto" style={{ color: '#5a7a7e' }}>
+          <p className="text-body-lg mt-4 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
             Только реальные цифры, проверенные кейсы и работающие стратегии
           </p>
         </div>
@@ -46,7 +46,7 @@ const FeaturesSection = () => {
                 <Icon name={f.icon} size={22} style={{ color: '#ffe1a2' }} />
               </div>
               <h3 className="font-bold mb-3" style={{ color: '#074952', fontSize: '1.15rem' }}>{f.title}</h3>
-              <p className="text-body-lg" style={{ color: '#5a7a7e' }}>{f.desc}</p>
+              <p className="text-body-lg" style={{ color: '#1a3336' }}>{f.desc}</p>
             </div>
           ))}
         </div>

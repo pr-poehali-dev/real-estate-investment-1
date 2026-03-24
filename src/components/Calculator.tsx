@@ -54,7 +54,7 @@ const Calculator = () => {
         <div className="text-center mb-10">
           <div className="section-label justify-center">Инструмент</div>
           <h2 className="text-heading" style={{ color: '#074952' }}>Калькулятор доходности</h2>
-          <p className="text-body-lg mt-3 max-w-md mx-auto" style={{ color: '#5a7a7e' }}>
+          <p className="text-body-lg mt-3 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
             Рассчитайте реальную доходность вашей инвестиции с учётом роста стоимости и налогов
           </p>
         </div>
@@ -80,8 +80,8 @@ const Calculator = () => {
                 style={{ background: `linear-gradient(to right, #074952 ${sliderProgress}%, #dde8ea 0%)` }}
               />
               <div className="flex justify-between mt-2">
-                <span className="font-medium text-sm" style={{ color: '#5a7a7e' }}>6 млн</span>
-                <span className="font-medium text-sm" style={{ color: '#5a7a7e' }}>100 млн</span>
+                <span className="font-medium text-sm" style={{ color: '#1a3336' }}>6 млн</span>
+                <span className="font-medium text-sm" style={{ color: '#1a3336' }}>100 млн</span>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ const Calculator = () => {
                   >
                     <Icon name={pt.icon} size={18} style={{ color: propType === pt.value ? '#ffe1a2' : '#074952' }} />
                     <div className="font-bold text-sm" style={{ color: propType === pt.value ? '#ffffff' : '#074952' }}>{pt.label}</div>
-                    <div className="font-medium text-sm" style={{ color: propType === pt.value ? 'rgba(255,225,162,0.85)' : '#5a7a7e' }}>~{pt.yield}%/год</div>
+                    <div className="font-medium text-sm" style={{ color: propType === pt.value ? '#ffe1a2' : '#1a3336' }}>~{pt.yield}%/год</div>
                   </button>
                 ))}
               </div>
@@ -119,7 +119,7 @@ const Calculator = () => {
                     style={{
                       borderColor: location === loc.value ? '#074952' : '#e8f0f1',
                       backgroundColor: location === loc.value ? '#074952' : '#f9f8f9',
-                      color: location === loc.value ? '#ffffff' : '#5a7a7e',
+                      color: location === loc.value ? '#ffffff' : '#1a3336',
                     }}
                   >
                     {loc.label}
@@ -145,7 +145,7 @@ const Calculator = () => {
                     style={{
                       borderColor: years === y ? '#074952' : '#e8f0f1',
                       backgroundColor: years === y ? '#074952' : '#f9f8f9',
-                      color: years === y ? '#ffffff' : '#5a7a7e',
+                      color: years === y ? '#ffffff' : '#1a3336',
                     }}
                   >
                     {y}
@@ -158,7 +158,7 @@ const Calculator = () => {
             <div className="rounded-xl p-5 border-2 flex items-center justify-between gap-4" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
               <div>
                 <div className="font-bold text-sm" style={{ color: '#074952' }}>Налоговая оптимизация</div>
-                <div className="font-medium text-sm mt-0.5" style={{ color: '#5a7a7e' }}>Переход с 13% НДФЛ на 6% УСН (ИП)</div>
+                <div className="font-medium text-sm mt-0.5" style={{ color: '#1a3336' }}>Переход с 13% НДФЛ на 6% УСН (ИП)</div>
               </div>
               <button
                 onClick={() => setTaxOptimize(!taxOptimize)}

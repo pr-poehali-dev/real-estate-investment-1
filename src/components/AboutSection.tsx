@@ -40,10 +40,10 @@ const AboutSection = () => {
                 Команда экспертов с{' '}
                 <span style={{ color: '#074952' }}>10-летним опытом</span>
               </h2>
-              <p className="text-body-lg mb-4" style={{ color: '#5a7a7e' }}>
+              <p className="text-body-lg mb-4" style={{ color: '#1a3336' }}>
                 Мы — команда экспертов по инвестициям в недвижимость на юге России. Помогаем нашим клиентам создать актив, который приносит стабильный доход с минимальными рисками.
               </p>
-              <p className="text-body-lg mb-6" style={{ color: '#5a7a7e' }}>
+              <p className="text-body-lg mb-6" style={{ color: '#1a3336' }}>
                 Осуществляем полное сопровождение на каждом этапе: от подбора объекта до организации сдачи в аренду в самых перспективных курортных локациях.
               </p>
               <div className="rounded-xl p-5 border-l-4" style={{ backgroundColor: '#f9f8f9', borderLeftColor: '#074952' }}>
@@ -65,7 +65,7 @@ const AboutSection = () => {
                 {locations.map((loc) => (
                   <div key={loc} className="flex items-center gap-3 py-2.5" style={{ borderBottom: '1px solid #f0f4f4' }}>
                     <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#074952' }} />
-                    <span className="font-medium text-body-lg" style={{ color: '#2d4a4d' }}>{loc}</span>
+                    <span className="font-medium text-body-lg" style={{ color: '#0d1f21' }}>{loc}</span>
                   </div>
                 ))}
               </div>
@@ -92,7 +92,7 @@ const AboutSection = () => {
           <div className="text-center mb-10">
             <div className="section-label-white justify-center">Материалы</div>
             <h3 className="text-heading" style={{ color: '#ffffff' }}>Что ещё важно знать?</h3>
-            <p className="text-body-lg mt-3 max-w-sm mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="text-body-lg mt-3 max-w-sm mx-auto" style={{ color: 'rgba(255,255,255,0.92)' }}>
               Рекомендуем ознакомиться с этими материалами, прежде чем принимать решение о покупке
             </p>
           </div>

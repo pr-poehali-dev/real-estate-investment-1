@@ -27,10 +27,10 @@ const FooterSection = () => {
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #e8f0f1' }}>
-          <p className="font-medium text-sm text-center md:text-left" style={{ color: '#5a7a7e' }}>
+          <p className="font-medium text-sm text-center md:text-left" style={{ color: '#1a3336' }}>
             © 2026 ЮгИнвест. Все права защищены.
           </p>
-          <p className="font-medium text-sm text-center" style={{ color: '#5a7a7e' }}>
+          <p className="font-medium text-sm text-center" style={{ color: '#1a3336' }}>
             Информация носит ознакомительный характер и не является инвестиционной рекомендацией.
           </p>
         </div>

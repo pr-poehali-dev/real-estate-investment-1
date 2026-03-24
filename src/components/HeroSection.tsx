@@ -37,14 +37,12 @@ const HeroSection = () => {
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
         <div className="max-w-3xl">
-          <div className="section-label-white">Краснодар · Сочи · Анапа · Крым</div>
-
           <h1 className="text-display mb-5" style={{ color: '#ffffff' }}>
             Инвестиции в недвижимость{' '}
             <span style={{ color: '#ffe1a2' }}>на юге России</span>
           </h1>
 
-          <p className="text-body-lg mb-10 max-w-xl" style={{ color: 'rgba(255,255,255,0.8)' }}>
+          <p className="text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>
             Честный разбор. Реальные цифры, кейсы, налоговые лайфхаки.
           </p>
 

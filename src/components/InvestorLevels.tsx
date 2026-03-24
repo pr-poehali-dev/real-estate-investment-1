@@ -71,7 +71,7 @@ const InvestorLevels = () => {
             Сообщество для тех, кто хочет<br />
             <span style={{ color: '#074952' }}>сохранить и приумножить капитал</span>
           </h2>
-          <p className="text-body-lg mt-4 max-w-lg mx-auto" style={{ color: '#5a7a7e' }}>
+          <p className="text-body-lg mt-4 max-w-lg mx-auto" style={{ color: '#1a2e30' }}>
             На квартирах, коммерции и отелях в Сочи, Краснодаре, Анапе и Крыму
           </p>
         </div>
@@ -81,14 +81,14 @@ const InvestorLevels = () => {
       {levels.map((level, idx) => {
         const bg = level.dark ? '#074952' : '#ffffff';
         const textMain = level.dark ? '#ffffff' : '#074952';
-        const textMuted = level.dark ? 'rgba(255,255,255,0.7)' : '#5a7a7e';
+        const textMuted = level.dark ? '#ffffff' : '#1a3336';
         const cardBg = level.dark ? 'rgba(255,255,255,0.07)' : '#f9f8f9';
         const cardBorder = level.dark ? 'rgba(255,225,162,0.2)' : '#e8f0f1';
         const iconBg = level.dark ? '#ffe1a2' : '#074952';
         const iconColor = level.dark ? '#074952' : '#ffe1a2';
         const pillBg = level.dark ? 'rgba(255,225,162,0.18)' : '#e8f0f1';
         const pillColor = level.dark ? '#ffe1a2' : '#074952';
-        const labelColor = level.dark ? 'rgba(255,225,162,0.7)' : '#5a7a7e';
+        const labelColor = level.dark ? '#ffe1a2' : '#074952';
         const postBg = level.dark ? 'rgba(255,255,255,0.05)' : '#f9f8f9';
         const postBorder = level.dark ? 'rgba(255,255,255,0.12)' : '#e8f0f1';
         const postHover = level.dark ? 'rgba(255,255,255,0.1)' : '#edf4f5';
