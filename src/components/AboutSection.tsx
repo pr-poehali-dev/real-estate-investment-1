@@ -33,14 +33,26 @@ const AboutSection = () => {
       <div className="py-14 md:py-20 px-6 md:px-12" style={{ backgroundColor: '#ffffff' }}>
         <div className="max-w-6xl mx-auto">
           {/* Team photos */}
-          <div className="grid grid-cols-3 gap-4 mb-12">
+          <div className="grid grid-cols-3 gap-4 mb-12 items-end">
             {[
-              'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f123d1ba-1f67-4f69-89d0-d5b9717749a2.jpg',
-              'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg',
-              'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg',
-            ].map((src, i) => (
-              <div key={i} className="rounded-2xl overflow-hidden aspect-[3/4] shadow-sm border" style={{ borderColor: '#e8f0f1' }}>
-                <img src={src} alt="" className="w-full h-full object-cover object-top" />
+              { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f123d1ba-1f67-4f69-89d0-d5b9717749a2.jpg', name: 'Оксана Орлова', role: 'Эксперт по инвестиционной недвижимости', center: false },
+              { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта', center: true },
+              { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта', center: false },
+            ].map((person, i) => (
+              <div key={i} className="flex flex-col" style={person.center ? { transform: 'translateY(-12px)' } : {}}>
+                <div
+                  className="rounded-2xl overflow-hidden aspect-[3/4] border"
+                  style={person.center
+                    ? { borderColor: '#ffe1a2', borderWidth: '2px', boxShadow: '0 8px 32px rgba(24,53,46,0.18), 0 0 0 4px rgba(255,225,162,0.18)' }
+                    : { borderColor: '#e8f0f1', borderWidth: '1px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }
+                  }
+                >
+                  <img src={person.src} alt={person.name} className="w-full h-full object-cover object-top" />
+                </div>
+                <div className="mt-3 text-center px-1">
+                  <div className="font-bold text-sm" style={{ color: '#18352e' }}>{person.name}</div>
+                  <div className="text-xs mt-0.5" style={{ color: '#6b8e8a' }}>{person.role}</div>
+                </div>
               </div>
             ))}
           </div>
