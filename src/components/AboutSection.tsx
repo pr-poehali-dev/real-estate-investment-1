@@ -26,89 +26,138 @@ const bonuses = [
   },
 ];
 
+const GOLD = '#c9a96e';
+const DARK_BG = '#0d0d0b';
+const SURFACE = '#141210';
+const SURFACE2 = '#1c1916';
+const TEXT = '#f0e6d0';
+const TEXT_MUTED = 'rgba(232,220,200,0.5)';
+const TEXT_DIM = 'rgba(232,220,200,0.3)';
+const BORDER = 'rgba(201,169,110,0.18)';
+
 const AboutSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-[#f7f3ef] texture-bg">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+    <section className="py-24 md:py-32 texture-bg" style={{ backgroundColor: DARK_BG }}>
+      <div className="max-w-6xl mx-auto px-8 md:px-16">
+
+        {/* Main grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Left */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="section-divider" />
-              <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">О нас</span>
+            <div className="flex items-center gap-4 mb-8">
+              <div style={{ width: '32px', height: '1px', backgroundColor: GOLD }} />
+              <span className="font-sans text-xs tracking-[0.25em] uppercase" style={{ color: GOLD }}>О нас</span>
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#2a2218] font-light leading-tight mb-6">
+            <h2 className="font-serif font-light mb-8" style={{ color: TEXT, fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', lineHeight: '1.2' }}>
               Команда экспертов с
-              <span className="italic text-[#9d8857]"> 10-летним опытом</span>
+              <span className="italic" style={{ color: GOLD }}> 10-летним опытом</span>
             </h2>
-            <p className="font-sans text-[#2a2218]/70 text-sm leading-relaxed mb-5">
+            <p className="font-sans font-light mb-5" style={{ color: TEXT_MUTED, fontSize: '0.9rem', lineHeight: '1.8' }}>
               Мы — команда экспертов по инвестициям в недвижимость на юге России. Помогаем нашим клиентам создать актив, который приносит стабильный доход с минимальными рисками.
             </p>
-            <p className="font-sans text-[#2a2218]/70 text-sm leading-relaxed mb-5">
+            <p className="font-sans font-light mb-8" style={{ color: TEXT_MUTED, fontSize: '0.9rem', lineHeight: '1.8' }}>
               Осуществляем полное сопровождение на каждом этапе: от подбора объекта до организации сдачи в аренду в самых перспективных курортных локациях.
             </p>
-            <p className="font-sans text-[#2a2218]/80 text-sm leading-relaxed font-medium bg-white rounded-xl p-4 border border-[#e3dad2]">
-              Инвестиции в курортную недвижимость — это не просто покупка, а стратегия по созданию капитала и пассивного дохода. В канале делимся цифрами, инсайдами и лотами, которые не найти в открытых источниках.
-            </p>
+            <div className="p-6 border" style={{ borderColor: BORDER, backgroundColor: SURFACE }}>
+              <div className="mb-3" style={{ width: '20px', height: '1px', backgroundColor: GOLD }} />
+              <p className="font-serif font-light italic" style={{ color: TEXT, fontSize: '1.05rem', lineHeight: '1.7' }}>
+                Инвестиции в курортную недвижимость — это не просто покупка, а стратегия по созданию капитала и пассивного дохода.
+              </p>
+              <p className="font-sans font-light mt-4" style={{ color: TEXT_MUTED, fontSize: '0.8rem', lineHeight: '1.7' }}>
+                В канале делимся цифрами, инсайдами и лотами, которые не найти в открытых источниках.
+              </p>
+            </div>
           </div>
 
           {/* Right — locations */}
-          <div className="bg-white rounded-2xl p-8 border border-[#e3dad2]">
-            <div className="flex items-center gap-3 mb-6">
-              <Icon name="MapPin" size={18} className="text-[#9d8857]" />
-              <span className="font-sans text-sm text-[#2a2218]/70 font-medium">Наши локации</span>
+          <div className="p-8 border" style={{ borderColor: BORDER, backgroundColor: SURFACE }}>
+            <div className="flex items-center gap-3 mb-8 pb-6" style={{ borderBottom: `1px solid ${BORDER}` }}>
+              <Icon name="MapPin" size={14} style={{ color: GOLD }} />
+              <span className="font-sans text-xs tracking-[0.2em] uppercase" style={{ color: TEXT_MUTED }}>Наши локации</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-1 mb-8">
               {locations.map((loc) => (
-                <div key={loc} className="flex items-center gap-3 py-2.5 border-b border-[#e3dad2]/60 last:border-0">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#9d8857] flex-shrink-0" />
-                  <span className="font-sans text-[#2a2218]/80 text-sm">{loc}</span>
+                <div key={loc} className="flex items-center gap-4 py-3" style={{ borderBottom: `1px solid rgba(201,169,110,0.08)` }}>
+                  <div style={{ width: '3px', height: '3px', backgroundColor: GOLD, borderRadius: '50%', flexShrink: 0 }} />
+                  <span className="font-sans font-light" style={{ color: TEXT_MUTED, fontSize: '0.9rem' }}>{loc}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {[
                 { value: '10+', label: 'лет на рынке' },
                 { value: '200+', label: 'сделок закрыто' },
               ].map((s) => (
-                <div key={s.label} className="bg-[#f7f3ef] rounded-xl p-4 text-center">
-                  <div className="font-serif text-[#9d8857] text-2xl">{s.value}</div>
-                  <div className="font-sans text-[#2a2218]/55 text-xs mt-1">{s.label}</div>
+                <div key={s.label} className="p-5 text-center border" style={{ borderColor: BORDER, backgroundColor: SURFACE2 }}>
+                  <div className="font-serif" style={{ color: GOLD, fontSize: '2rem' }}>{s.value}</div>
+                  <div className="font-sans text-xs mt-2 tracking-wider" style={{ color: TEXT_DIM, textTransform: 'uppercase' }}>{s.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
+        {/* Separator */}
+        <div style={{ height: '1px', background: `linear-gradient(90deg, transparent, ${GOLD}30, transparent)`, marginBottom: '64px' }} />
+
         {/* Bonuses */}
-        <div className="bg-[#2a2218] rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h3 className="font-serif text-3xl md:text-4xl text-white font-light mb-3">Что еще важно знать?</h3>
-            <p className="font-sans text-white/50 text-sm">Рекомендуем ознакомиться с этими материалами, прежде чем принимать решение о покупке</p>
+        <div>
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div style={{ width: '32px', height: '1px', backgroundColor: GOLD }} />
+              <span className="font-sans text-xs tracking-[0.25em] uppercase" style={{ color: GOLD }}>Материалы</span>
+              <div style={{ width: '32px', height: '1px', backgroundColor: GOLD }} />
+            </div>
+            <h3 className="font-serif font-light mb-4" style={{ color: TEXT, fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)' }}>
+              Что ещё важно знать?
+            </h3>
+            <p className="font-sans font-light max-w-sm mx-auto" style={{ color: TEXT_MUTED, fontSize: '0.85rem', lineHeight: '1.8' }}>
+              Рекомендуем ознакомиться с этими материалами, прежде чем принимать решение о покупке
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px mb-12" style={{ backgroundColor: BORDER }}>
             {bonuses.map((b) => (
-              <div key={b.num} className="bg-white/6 rounded-xl p-6 border border-white/10 hover:border-[#9d8857]/40 transition-colors duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#9d8857]/20 flex items-center justify-center">
-                    <Icon name={b.icon} size={18} className="text-[#9d8857]" />
+              <div
+                key={b.num}
+                className="p-8 transition-all duration-300 group"
+                style={{ backgroundColor: SURFACE }}
+                onMouseEnter={e => (e.currentTarget.style.backgroundColor = SURFACE2)}
+                onMouseLeave={e => (e.currentTarget.style.backgroundColor = SURFACE)}
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-9 h-9 flex items-center justify-center border" style={{ borderColor: `${GOLD}30` }}>
+                    <Icon name={b.icon} size={15} style={{ color: GOLD }} />
                   </div>
-                  <span className="font-serif text-[#9d8857] text-sm">+{b.num}</span>
+                  <span className="font-serif" style={{ color: `${GOLD}40`, fontSize: '2.5rem', lineHeight: '1' }}>
+                    +{b.num}
+                  </span>
                 </div>
-                <h4 className="font-sans text-white/85 text-sm leading-relaxed mb-3">{b.title}</h4>
-                <span className="font-sans text-white/35 text-xs bg-white/8 px-3 py-1 rounded-full">{b.who}</span>
+                <h4 className="font-sans font-light mb-4" style={{ color: TEXT, fontSize: '0.9rem', lineHeight: '1.7' }}>
+                  {b.title}
+                </h4>
+                <span
+                  className="font-sans text-xs px-3 py-1 tracking-wider"
+                  style={{ color: GOLD, border: `1px solid ${GOLD}30`, textTransform: 'uppercase', fontSize: '0.65rem', letterSpacing: '0.15em' }}
+                >
+                  {b.who}
+                </span>
               </div>
             ))}
           </div>
+
           <div className="text-center">
             <a
-              href="https://t.me/"
+              href="https://t.me/+Oikjo-gGhtxiZjZi"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#9d8857] text-white font-sans text-sm px-10 py-4 rounded-full hover:bg-[#b8a06e] transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-3 font-sans text-xs tracking-[0.15em] uppercase px-12 py-4 transition-all duration-300"
+              style={{ backgroundColor: GOLD, color: DARK_BG, letterSpacing: '0.12em' }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
             >
-              <Icon name="Send" size={16} />
+              <Icon name="Send" size={13} />
               Перейти в TG-канал
             </a>
           </div>

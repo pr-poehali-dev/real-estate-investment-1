@@ -6,8 +6,8 @@ const levels = [
     tag: 'Начинающие',
     budget: 'Бюджет 1–15 млн ₽',
     icon: 'Sprout',
-    bg: 'bg-[#f7f3ef]',
-    accentColor: '#9d8857',
+    accentColor: '#c9a96e',
+    bgColor: '#0f0e0c',
     headline: 'Для начинающих и семейных инвестиций',
     pains: [
       'Мечтаете о квартире у моря?',
@@ -26,8 +26,8 @@ const levels = [
     tag: 'Опытные',
     budget: 'Бюджет 15–30 млн ₽',
     icon: 'TrendingUp',
-    bg: 'bg-[#eef2ee]',
-    accentColor: '#3e563f',
+    accentColor: '#7aaa8a',
+    bgColor: '#0c100d',
     headline: 'Для опытных инвесторов',
     pains: [
       'Квартиры есть, доходность 5–7% перестала радовать?',
@@ -46,8 +46,8 @@ const levels = [
     tag: 'Крупные',
     budget: 'Бюджет от 30 млн ₽',
     icon: 'Gem',
-    bg: 'bg-[#3d2e1e]',
-    accentColor: '#c4a96a',
+    accentColor: '#c9a96e',
+    bgColor: '#0d0b08',
     headline: 'Для крупных инвесторов',
     pains: [
       'Капитал есть, но инфляция съедает?',
@@ -67,114 +67,156 @@ const InvestorLevels = () => {
   return (
     <section>
       {/* Section header */}
-      <div className="bg-[#f7f3ef] texture-dots pt-20 md:pt-28 pb-12 px-6 md:px-12">
+      <div className="py-24 md:py-32 px-8 md:px-16 texture-dots" style={{ backgroundColor: '#0d0d0b' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="section-divider" />
-            <span className="text-[#9d8857] font-sans text-sm tracking-[0.15em] uppercase">Кому будет полезен канал</span>
-            <div className="w-14 h-0.5 bg-gradient-to-l from-[#9d8857] to-transparent" />
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <div style={{ width: '32px', height: '1px', backgroundColor: '#c9a96e' }} />
+            <span className="font-sans text-xs tracking-[0.25em] uppercase" style={{ color: '#c9a96e' }}>Кому будет полезен канал</span>
+            <div style={{ width: '32px', height: '1px', backgroundColor: '#c9a96e' }} />
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#2a2218] font-light leading-tight">
+          <h2 className="font-serif font-light" style={{ color: '#f0e6d0', fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.2' }}>
             Сообщество для тех, кто хочет
             <br />
-            <span className="italic text-[#9d8857]">сохранить и приумножить капитал</span>
+            <span className="italic" style={{ color: '#c9a96e' }}>сохранить и приумножить капитал</span>
           </h2>
-          <p className="font-sans text-[#2a2218]/60 mt-4 text-sm max-w-lg mx-auto">
+          <p className="font-sans font-light mt-5 max-w-md mx-auto" style={{ color: 'rgba(232,220,200,0.45)', fontSize: '0.85rem', lineHeight: '1.8' }}>
             На квартирах, коммерции и отелях в Сочи, Краснодаре, Анапе и Крыму
           </p>
         </div>
       </div>
 
       {/* Three level blocks */}
-      {levels.map((level, idx) => {
-        const isDark = idx === 2;
-        const textMain = isDark ? 'text-white' : 'text-[#2a2218]';
-        const textMuted = isDark ? 'text-white/55' : 'text-[#2a2218]/55';
-        const textSub = isDark ? 'text-white/75' : 'text-[#2a2218]/75';
-        const cardBg = isDark ? 'bg-white/8 border-white/12' : 'bg-white border-[#e3dad2]';
-        const cardHover = isDark ? 'hover:border-[#9d8857]/50' : 'hover:border-[#9d8857]/50 hover:shadow-md';
-        const pillBg = isDark ? 'bg-[#c4a96a] text-[#2a2218] font-medium' : 'bg-[#9d8857] text-white font-medium';
-        const ctaBg = isDark ? 'bg-white/10 border-white/15' : 'bg-white border-[#e3dad2]';
-        const dotBorder = isDark ? 'border-[#9d8857]/60' : 'border-[#9d8857]/40';
+      {levels.map((level, idx) => (
+        <div key={idx}>
+          {/* Separator */}
+          <div style={{ height: '1px', background: `linear-gradient(90deg, transparent, ${level.accentColor}40, transparent)` }} />
 
-        return (
-          <div key={idx}>
-          <div
-            className={`${level.bg} py-10 md:py-14 px-6 md:px-12`}
-          >
+          <div className="py-16 md:py-20 px-8 md:px-16" style={{ backgroundColor: level.bgColor }}>
             <div className="max-w-6xl mx-auto">
 
               {/* Level header */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-                <div className="flex items-center gap-4">
-                  <span className="font-serif text-6xl md:text-7xl leading-none" style={{ color: level.accentColor, opacity: 0.2 }}>
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
+                <div className="flex items-start gap-6">
+                  {/* Big number */}
+                  <span
+                    className="font-serif leading-none select-none flex-shrink-0"
+                    style={{ color: level.accentColor, opacity: 0.12, fontSize: '5rem', lineHeight: '1' }}
+                  >
                     {level.num}
                   </span>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Icon name={level.icon} size={18} style={{ color: level.accentColor }} />
-                      <span className="font-sans text-sm font-medium" style={{ color: level.accentColor }}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon name={level.icon} size={14} style={{ color: level.accentColor }} />
+                      <span
+                        className="font-sans text-xs tracking-[0.2em] uppercase"
+                        style={{ color: level.accentColor }}
+                      >
                         {level.tag}
                       </span>
                     </div>
-                    <h3 className={`font-serif text-2xl md:text-3xl font-light leading-tight ${textMain}`}>
+                    <h3
+                      className="font-serif font-light"
+                      style={{ color: '#f0e6d0', fontSize: 'clamp(1.4rem, 3vw, 2.2rem)', lineHeight: '1.2' }}
+                    >
                       {level.headline}
                     </h3>
                   </div>
                 </div>
-                <div className={`sm:ml-auto font-sans text-xs px-4 py-1.5 rounded-full flex-shrink-0 ${pillBg}`}>
+
+                {/* Budget pill */}
+                <div
+                  className="font-sans text-xs px-5 py-2 flex-shrink-0 self-start sm:self-center"
+                  style={{
+                    border: `1px solid ${level.accentColor}50`,
+                    color: level.accentColor,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                  }}
+                >
                   {level.budget}
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {/* Content grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Left: pains + cta */}
-                <div className={`rounded-2xl p-5 border ${ctaBg}`}>
-                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-4 ${textMuted}`}>Это про вас?</p>
-                  <ul className="space-y-3 mb-5">
+                <div
+                  className="p-8 border"
+                  style={{ borderColor: `${level.accentColor}18`, backgroundColor: 'rgba(255,255,255,0.02)' }}
+                >
+                  <p
+                    className="font-sans text-xs tracking-[0.2em] uppercase mb-6"
+                    style={{ color: `${level.accentColor}80` }}
+                  >
+                    Это про вас?
+                  </p>
+                  <ul className="space-y-4 mb-8">
                     {level.pains.map((p, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center mt-0.5 flex-shrink-0 ${dotBorder}`}>
-                          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: level.accentColor }} />
-                        </div>
-                        <span className={`font-sans text-sm leading-relaxed ${textSub}`}>{p}</span>
+                      <li key={i} className="flex items-start gap-4">
+                        <div
+                          className="flex-shrink-0 mt-1.5"
+                          style={{ width: '4px', height: '4px', backgroundColor: level.accentColor, borderRadius: '50%' }}
+                        />
+                        <span
+                          className="font-sans font-light"
+                          style={{ color: 'rgba(232,220,200,0.65)', fontSize: '0.9rem', lineHeight: '1.7' }}
+                        >
+                          {p}
+                        </span>
                       </li>
                     ))}
                   </ul>
-                  <p className={`font-sans text-sm leading-relaxed ${textSub} border-t pt-5 ${isDark ? 'border-white/10' : 'border-[#e3dad2]'}`}>
+                  <div style={{ height: '1px', backgroundColor: `${level.accentColor}15`, marginBottom: '24px' }} />
+                  <p
+                    className="font-sans font-light"
+                    style={{ color: 'rgba(232,220,200,0.55)', fontSize: '0.85rem', lineHeight: '1.8' }}
+                  >
                     {level.cta}
                   </p>
                 </div>
 
                 {/* Right: posts */}
                 <div>
-                  <p className={`font-sans text-xs tracking-[0.12em] uppercase mb-5 ${textMuted}`}>
+                  <p
+                    className="font-sans text-xs tracking-[0.2em] uppercase mb-6"
+                    style={{ color: `${level.accentColor}80` }}
+                  >
                     Начните с материалов в канале:
                   </p>
                   <div className="space-y-3">
                     {level.posts.map((post, i) => (
                       <a
                         key={i}
-                        href="https://t.me/"
+                        href="https://t.me/+Oikjo-gGhtxiZjZi"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-start gap-4 rounded-xl p-4 border transition-all duration-300 group ${cardBg} ${cardHover}`}
+                        className="flex items-start gap-5 p-5 border transition-all duration-300 group"
+                        style={{ borderColor: `${level.accentColor}18`, backgroundColor: 'transparent' }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.borderColor = `${level.accentColor}45`;
+                          e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.02)';
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.borderColor = `${level.accentColor}18`;
+                          e.currentTarget.style.backgroundColor = 'transparent';
+                        }}
                       >
-                        <div
-                          className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors"
-                          style={{ backgroundColor: `${level.accentColor}18` }}
+                        <span
+                          className="font-serif flex-shrink-0 leading-none"
+                          style={{ color: level.accentColor, fontSize: '1.1rem', opacity: 0.6, marginTop: '2px' }}
                         >
-                          <span className="font-serif text-sm font-light" style={{ color: level.accentColor }}>
-                            {i + 1}
-                          </span>
-                        </div>
-                        <span className={`font-sans text-sm leading-relaxed flex-1 ${textSub} group-hover:${isDark ? 'text-white' : 'text-[#2a2218]'} transition-colors`}>
+                          {i + 1}
+                        </span>
+                        <span
+                          className="font-sans font-light flex-1"
+                          style={{ color: 'rgba(232,220,200,0.6)', fontSize: '0.85rem', lineHeight: '1.7' }}
+                        >
                           {post}
                         </span>
                         <Icon
                           name="ArrowRight"
-                          size={15}
-                          className="flex-shrink-0 mt-0.5 opacity-30 group-hover:opacity-80 transition-opacity"
+                          size={13}
+                          className="flex-shrink-0 mt-1 opacity-0 group-hover:opacity-60 transition-opacity"
                           style={{ color: level.accentColor }}
                         />
                       </a>
@@ -182,25 +224,23 @@ const InvestorLevels = () => {
                   </div>
 
                   <a
-                    href="https://t.me/"
+                    href="https://t.me/+Oikjo-gGhtxiZjZi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full mt-5 font-sans text-sm px-6 py-3.5 rounded-full transition-colors duration-300"
-                    style={{ backgroundColor: level.accentColor, color: 'white' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.85')}
-                    onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+                    className="flex items-center justify-center gap-3 w-full mt-6 font-sans text-xs tracking-[0.15em] uppercase px-8 py-4 transition-all duration-300"
+                    style={{ backgroundColor: level.accentColor, color: '#0d0d0b', letterSpacing: '0.12em' }}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
                   >
                     Перейти в TG-канал
-                    <Icon name="ArrowRight" size={15} />
+                    <Icon name="ArrowRight" size={13} />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          </div>
-        );
-
-      })}
+        </div>
+      ))}
     </section>
   );
 };

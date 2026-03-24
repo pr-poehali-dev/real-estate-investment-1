@@ -1,30 +1,35 @@
 const FooterSection = () => {
   return (
-    <footer className="bg-[#1e1a12] py-12 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full border border-[#9d8857] flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#9d8857]" />
+    <footer style={{ backgroundColor: '#080806', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
+      <div className="max-w-6xl mx-auto px-8 md:px-16 py-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
+          <div className="flex items-center gap-3">
+            <div className="w-7 h-7 rounded-full border flex items-center justify-center" style={{ borderColor: '#c9a96e' }}>
+              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a96e' }} />
             </div>
-            <span className="font-serif text-white text-lg tracking-wide">Южный Берег Капитала</span>
+            <span className="font-serif tracking-widest" style={{ color: '#f0e6d0', fontSize: '1rem', letterSpacing: '0.06em' }}>
+              Южный Берег Капитала
+            </span>
           </div>
 
           <a
-            href="https://t.me/"
+            href="https://t.me/+Oikjo-gGhtxiZjZi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 border border-[#9d8857]/50 text-[#9d8857] font-sans text-sm px-5 py-2.5 rounded-full hover:bg-[#9d8857]/15 transition-all duration-200"
+            className="font-sans text-xs tracking-[0.15em] uppercase px-6 py-2.5 transition-all duration-300"
+            style={{ border: '1px solid rgba(201,169,110,0.35)', color: '#c9a96e', letterSpacing: '0.12em' }}
+            onMouseEnter={e => (e.currentTarget.style.borderColor = '#c9a96e')}
+            onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(201,169,110,0.35)')}
           >
             Telegram-канал
           </a>
         </div>
 
-        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="font-sans text-white/25 text-xs text-center md:text-left">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid rgba(201,169,110,0.1)' }}>
+          <p className="font-sans text-xs text-center md:text-left" style={{ color: 'rgba(232,220,200,0.2)' }}>
             © 2026 ЮгИнвест. Все права защищены.
           </p>
-          <p className="font-sans text-white/25 text-xs text-center">
+          <p className="font-sans text-xs text-center" style={{ color: 'rgba(232,220,200,0.2)' }}>
             Информация носит ознакомительный характер и не является инвестиционной рекомендацией.
           </p>
         </div>
