@@ -6,8 +6,7 @@ const levels = [
     tag: 'Начинающие',
     budget: 'Бюджет 1–15 млн ₽',
     icon: 'Sprout',
-    accentColor: '#c9a96e',
-    bgColor: '#0f0e0c',
+    dark: false,
     headline: 'Для начинающих и семейных инвестиций',
     pains: [
       'Мечтаете о квартире у моря?',
@@ -26,8 +25,7 @@ const levels = [
     tag: 'Опытные',
     budget: 'Бюджет 15–30 млн ₽',
     icon: 'TrendingUp',
-    accentColor: '#7aaa8a',
-    bgColor: '#0c100d',
+    dark: true,
     headline: 'Для опытных инвесторов',
     pains: [
       'Квартиры есть, доходность 5–7% перестала радовать?',
@@ -46,8 +44,7 @@ const levels = [
     tag: 'Крупные',
     budget: 'Бюджет от 30 млн ₽',
     icon: 'Gem',
-    accentColor: '#c9a96e',
-    bgColor: '#0d0b08',
+    dark: false,
     headline: 'Для крупных инвесторов',
     pains: [
       'Капитал есть, но инфляция съедает?',
@@ -66,159 +63,117 @@ const levels = [
 const InvestorLevels = () => {
   return (
     <section>
-      {/* Section header */}
-      <div className="py-24 md:py-32 px-8 md:px-16 texture-dots" style={{ backgroundColor: '#0d0d0b' }}>
+      {/* Section header — light bg */}
+      <div className="py-14 md:py-20 px-6 md:px-12" style={{ backgroundColor: '#f9f8f9' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div style={{ width: '32px', height: '1px', backgroundColor: '#c9a96e' }} />
-            <span className="font-sans text-xs tracking-[0.25em] uppercase" style={{ color: '#c9a96e' }}>Кому будет полезен канал</span>
-            <div style={{ width: '32px', height: '1px', backgroundColor: '#c9a96e' }} />
-          </div>
-          <h2 className="font-serif font-light" style={{ color: '#f0e6d0', fontSize: 'clamp(2rem, 4vw, 3.5rem)', lineHeight: '1.2' }}>
-            Сообщество для тех, кто хочет
-            <br />
-            <span className="italic" style={{ color: '#c9a96e' }}>сохранить и приумножить капитал</span>
+          <div className="section-label justify-center">Кому будет полезен канал</div>
+          <h2 className="text-heading" style={{ color: '#074952' }}>
+            Сообщество для тех, кто хочет<br />
+            <span style={{ color: '#074952' }}>сохранить и приумножить капитал</span>
           </h2>
-          <p className="font-sans font-light mt-5 max-w-md mx-auto" style={{ color: 'rgba(232,220,200,0.45)', fontSize: '0.85rem', lineHeight: '1.8' }}>
+          <p className="text-body-lg mt-4 max-w-lg mx-auto" style={{ color: '#5a7a7e' }}>
             На квартирах, коммерции и отелях в Сочи, Краснодаре, Анапе и Крыму
           </p>
         </div>
       </div>
 
-      {/* Three level blocks */}
-      {levels.map((level, idx) => (
-        <div key={idx}>
-          {/* Separator */}
-          <div style={{ height: '1px', background: `linear-gradient(90deg, transparent, ${level.accentColor}40, transparent)` }} />
+      {/* Three level blocks — alternating bg */}
+      {levels.map((level, idx) => {
+        const bg = level.dark ? '#074952' : '#ffffff';
+        const textMain = level.dark ? '#ffffff' : '#074952';
+        const textMuted = level.dark ? 'rgba(255,255,255,0.7)' : '#5a7a7e';
+        const cardBg = level.dark ? 'rgba(255,255,255,0.07)' : '#f9f8f9';
+        const cardBorder = level.dark ? 'rgba(255,225,162,0.2)' : '#e8f0f1';
+        const iconBg = level.dark ? '#ffe1a2' : '#074952';
+        const iconColor = level.dark ? '#074952' : '#ffe1a2';
+        const pillBg = level.dark ? 'rgba(255,225,162,0.18)' : '#e8f0f1';
+        const pillColor = level.dark ? '#ffe1a2' : '#074952';
+        const labelColor = level.dark ? 'rgba(255,225,162,0.7)' : '#5a7a7e';
+        const postBg = level.dark ? 'rgba(255,255,255,0.05)' : '#f9f8f9';
+        const postBorder = level.dark ? 'rgba(255,255,255,0.12)' : '#e8f0f1';
+        const postHover = level.dark ? 'rgba(255,255,255,0.1)' : '#edf4f5';
+        const btnBg = level.dark ? '#ffe1a2' : '#074952';
+        const btnColor = level.dark ? '#074952' : '#ffffff';
 
-          <div className="py-16 md:py-20 px-8 md:px-16" style={{ backgroundColor: level.bgColor }}>
+        return (
+          <div key={idx} className="py-12 md:py-16 px-6 md:px-12" style={{ backgroundColor: bg }}>
             <div className="max-w-6xl mx-auto">
-
               {/* Level header */}
-              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-10">
-                <div className="flex items-start gap-6">
-                  {/* Big number */}
-                  <span
-                    className="font-serif leading-none select-none flex-shrink-0"
-                    style={{ color: level.accentColor, opacity: 0.12, fontSize: '5rem', lineHeight: '1' }}
-                  >
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+                <div className="flex items-center gap-4">
+                  <span className="font-extrabold" style={{ color: level.dark ? 'rgba(255,225,162,0.2)' : 'rgba(7,73,82,0.12)', fontSize: '3.5rem', lineHeight: '1', fontFamily: 'Mulish, sans-serif' }}>
                     {level.num}
                   </span>
                   <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name={level.icon} size={14} style={{ color: level.accentColor }} />
-                      <span
-                        className="font-sans text-xs tracking-[0.2em] uppercase"
-                        style={{ color: level.accentColor }}
-                      >
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: iconBg }}>
+                        <Icon name={level.icon} size={14} style={{ color: iconColor }} />
+                      </div>
+                      <span className="font-bold text-sm" style={{ color: level.dark ? '#ffe1a2' : '#074952', letterSpacing: '0.04em' }}>
                         {level.tag}
                       </span>
                     </div>
-                    <h3
-                      className="font-serif font-light"
-                      style={{ color: '#f0e6d0', fontSize: 'clamp(1.4rem, 3vw, 2.2rem)', lineHeight: '1.2' }}
-                    >
+                    <h3 className="font-bold" style={{ color: textMain, fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)' }}>
                       {level.headline}
                     </h3>
                   </div>
                 </div>
-
-                {/* Budget pill */}
                 <div
-                  className="font-sans text-xs px-5 py-2 flex-shrink-0 self-start sm:self-center"
-                  style={{
-                    border: `1px solid ${level.accentColor}50`,
-                    color: level.accentColor,
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase',
-                  }}
+                  className="sm:ml-auto font-bold text-xs px-4 py-1.5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: pillBg, color: pillColor, letterSpacing: '0.04em' }}
                 >
                   {level.budget}
                 </div>
               </div>
 
-              {/* Content grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Left: pains + cta */}
-                <div
-                  className="p-8 border"
-                  style={{ borderColor: `${level.accentColor}18`, backgroundColor: 'rgba(255,255,255,0.02)' }}
-                >
-                  <p
-                    className="font-sans text-xs tracking-[0.2em] uppercase mb-6"
-                    style={{ color: `${level.accentColor}80` }}
-                  >
+                <div className="rounded-xl p-6 border" style={{ backgroundColor: cardBg, borderColor: cardBorder }}>
+                  <p className="font-bold text-xs uppercase tracking-wider mb-5" style={{ color: labelColor }}>
                     Это про вас?
                   </p>
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {level.pains.map((p, i) => (
-                      <li key={i} className="flex items-start gap-4">
+                      <li key={i} className="flex items-start gap-3">
                         <div
-                          className="flex-shrink-0 mt-1.5"
-                          style={{ width: '4px', height: '4px', backgroundColor: level.accentColor, borderRadius: '50%' }}
-                        />
-                        <span
-                          className="font-sans font-light"
-                          style={{ color: 'rgba(232,220,200,0.65)', fontSize: '0.9rem', lineHeight: '1.7' }}
+                          className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                          style={{ backgroundColor: level.dark ? 'rgba(255,225,162,0.18)' : 'rgba(7,73,82,0.1)' }}
                         >
-                          {p}
-                        </span>
+                          <Icon name="Check" size={11} style={{ color: level.dark ? '#ffe1a2' : '#074952' }} />
+                        </div>
+                        <span className="text-body-lg" style={{ color: textMuted }}>{p}</span>
                       </li>
                     ))}
                   </ul>
-                  <div style={{ height: '1px', backgroundColor: `${level.accentColor}15`, marginBottom: '24px' }} />
-                  <p
-                    className="font-sans font-light"
-                    style={{ color: 'rgba(232,220,200,0.55)', fontSize: '0.85rem', lineHeight: '1.8' }}
-                  >
-                    {level.cta}
-                  </p>
+                  <div style={{ height: '1px', backgroundColor: level.dark ? 'rgba(255,255,255,0.1)' : '#e8f0f1', marginBottom: '20px' }} />
+                  <p className="text-body-lg" style={{ color: textMuted }}>{level.cta}</p>
                 </div>
 
                 {/* Right: posts */}
                 <div>
-                  <p
-                    className="font-sans text-xs tracking-[0.2em] uppercase mb-6"
-                    style={{ color: `${level.accentColor}80` }}
-                  >
+                  <p className="font-bold text-xs uppercase tracking-wider mb-5" style={{ color: labelColor }}>
                     Начните с материалов в канале:
                   </p>
-                  <div className="space-y-3">
+                  <div className="space-y-3 mb-5">
                     {level.posts.map((post, i) => (
                       <a
                         key={i}
                         href="https://t.me/+Oikjo-gGhtxiZjZi"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-start gap-5 p-5 border transition-all duration-300 group"
-                        style={{ borderColor: `${level.accentColor}18`, backgroundColor: 'transparent' }}
-                        onMouseEnter={e => {
-                          e.currentTarget.style.borderColor = `${level.accentColor}45`;
-                          e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.02)';
-                        }}
-                        onMouseLeave={e => {
-                          e.currentTarget.style.borderColor = `${level.accentColor}18`;
-                          e.currentTarget.style.backgroundColor = 'transparent';
-                        }}
+                        className="flex items-start gap-4 rounded-xl p-4 border transition-all duration-200 group"
+                        style={{ backgroundColor: postBg, borderColor: postBorder }}
+                        onMouseEnter={e => (e.currentTarget.style.backgroundColor = postHover)}
+                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = postBg)}
                       >
-                        <span
-                          className="font-serif flex-shrink-0 leading-none"
-                          style={{ color: level.accentColor, fontSize: '1.1rem', opacity: 0.6, marginTop: '2px' }}
+                        <div
+                          className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-sm"
+                          style={{ backgroundColor: level.dark ? 'rgba(255,225,162,0.18)' : 'rgba(7,73,82,0.08)', color: level.dark ? '#ffe1a2' : '#074952' }}
                         >
                           {i + 1}
-                        </span>
-                        <span
-                          className="font-sans font-light flex-1"
-                          style={{ color: 'rgba(232,220,200,0.6)', fontSize: '0.85rem', lineHeight: '1.7' }}
-                        >
-                          {post}
-                        </span>
-                        <Icon
-                          name="ArrowRight"
-                          size={13}
-                          className="flex-shrink-0 mt-1 opacity-0 group-hover:opacity-60 transition-opacity"
-                          style={{ color: level.accentColor }}
-                        />
+                        </div>
+                        <span className="text-body-lg flex-1" style={{ color: textMuted }}>{post}</span>
+                        <Icon name="ArrowRight" size={15} style={{ color: level.dark ? 'rgba(255,225,162,0.5)' : 'rgba(7,73,82,0.3)', flexShrink: 0, marginTop: '3px' }} />
                       </a>
                     ))}
                   </div>
@@ -227,20 +182,18 @@ const InvestorLevels = () => {
                     href="https://t.me/+Oikjo-gGhtxiZjZi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 w-full mt-6 font-sans text-xs tracking-[0.15em] uppercase px-8 py-4 transition-all duration-300"
-                    style={{ backgroundColor: level.accentColor, color: '#0d0d0b', letterSpacing: '0.12em' }}
-                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                    className="flex items-center justify-center gap-2 w-full font-bold px-6 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
+                    style={{ backgroundColor: btnBg, color: btnColor, fontSize: '0.95rem' }}
                   >
+                    <Icon name="Send" size={15} />
                     Перейти в TG-канал
-                    <Icon name="ArrowRight" size={13} />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </section>
   );
 };

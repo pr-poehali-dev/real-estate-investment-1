@@ -1,13 +1,15 @@
+import Icon from '@/components/ui/icon';
+
 const FooterSection = () => {
   return (
-    <footer style={{ backgroundColor: '#080806', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-      <div className="max-w-6xl mx-auto px-8 md:px-16 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10">
+    <footer style={{ backgroundColor: '#f9f8f9', borderTop: '2px solid #e8f0f1' }}>
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 rounded-full border flex items-center justify-center" style={{ borderColor: '#c9a96e' }}>
-              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a96e' }} />
+            <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#074952' }}>
+              <Icon name="TrendingUp" size={15} style={{ color: '#ffe1a2' }} />
             </div>
-            <span className="font-serif tracking-widest" style={{ color: '#f0e6d0', fontSize: '1rem', letterSpacing: '0.06em' }}>
+            <span className="font-bold" style={{ color: '#074952', fontSize: '1.05rem' }}>
               Южный Берег Капитала
             </span>
           </div>
@@ -16,20 +18,19 @@ const FooterSection = () => {
             href="https://t.me/+Oikjo-gGhtxiZjZi"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-sans text-xs tracking-[0.15em] uppercase px-6 py-2.5 transition-all duration-300"
-            style={{ border: '1px solid rgba(201,169,110,0.35)', color: '#c9a96e', letterSpacing: '0.12em' }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = '#c9a96e')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(201,169,110,0.35)')}
+            className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
+            style={{ borderColor: '#074952', color: '#074952' }}
           >
+            <Icon name="Send" size={14} />
             Telegram-канал
           </a>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid rgba(201,169,110,0.1)' }}>
-          <p className="font-sans text-xs text-center md:text-left" style={{ color: 'rgba(232,220,200,0.2)' }}>
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #e8f0f1' }}>
+          <p className="font-medium text-sm text-center md:text-left" style={{ color: '#5a7a7e' }}>
             © 2026 ЮгИнвест. Все права защищены.
           </p>
-          <p className="font-sans text-xs text-center" style={{ color: 'rgba(232,220,200,0.2)' }}>
+          <p className="font-medium text-sm text-center" style={{ color: '#5a7a7e' }}>
             Информация носит ознакомительный характер и не является инвестиционной рекомендацией.
           </p>
         </div>
