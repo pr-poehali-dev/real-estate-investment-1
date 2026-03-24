@@ -71,21 +71,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Stats bar */}
-      <div className="relative z-10" style={{ backgroundColor: 'rgba(5,56,64,0.95)', borderTop: '1px solid rgba(255,225,162,0.2)' }}>
-        <div className="max-w-5xl mx-auto px-6 md:px-12 py-5 grid grid-cols-3 gap-4">
-          {[
-            { value: '10 лет', label: 'на рынке юга' },
-            { value: '15–29%', label: 'экономия на налогах' },
-            { value: '1 млн/мес', label: 'пассивный доход' },
-          ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="font-extrabold" style={{ color: '#ffe1a2', fontSize: '1.35rem' }}>{stat.value}</div>
-              <div className="font-medium mt-0.5" style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.72rem', letterSpacing: '0.04em' }}>{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };
