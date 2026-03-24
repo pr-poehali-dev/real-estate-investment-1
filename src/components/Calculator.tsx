@@ -49,25 +49,25 @@ const Calculator = () => {
   const sliderProgress = ((budget - 6_000_000) / (100_000_000 - 6_000_000)) * 100;
 
   return (
-    <section id="calculator" className="py-14 md:py-20" style={{ backgroundColor: '#f9f8f9' }}>
+    <section id="calculator" className="py-10 md:py-14" style={{ backgroundColor: '#f9f8f9' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-10">
+        <div className="text-center mb-7">
           <div className="section-label justify-center">Инструмент</div>
           <h2 className="text-heading" style={{ color: '#074952' }}>Калькулятор доходности</h2>
-          <p className="text-body-lg mt-3 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
-            Рассчитайте реальную доходность вашей инвестиции с учётом роста стоимости и налогов
+          <p className="text-body-lg mt-2 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
+            Рассчитайте реальную доходность с учётом роста стоимости и налогов
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 items-start">
           {/* Inputs */}
-          <div className="lg:col-span-3 space-y-5">
+          <div className="lg:col-span-3 space-y-3">
 
             {/* Budget */}
-            <div className="rounded-xl p-6 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-              <div className="flex items-center justify-between mb-3">
+            <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+              <div className="flex items-center justify-between mb-2">
                 <label className="font-bold text-sm" style={{ color: '#074952' }}>Бюджет инвестиции</label>
-                <span className="font-extrabold" style={{ color: '#074952', fontSize: '1.2rem' }}>{formatMoney(budget)}</span>
+                <span className="font-extrabold" style={{ color: '#074952', fontSize: '1.1rem' }}>{formatMoney(budget)}</span>
               </div>
               <input
                 type="range"
@@ -79,43 +79,45 @@ const Calculator = () => {
                 className="w-full cursor-pointer"
                 style={{ background: `linear-gradient(to right, #074952 ${sliderProgress}%, #dde8ea 0%)` }}
               />
-              <div className="flex justify-between mt-2">
-                <span className="font-medium text-sm" style={{ color: '#1a3336' }}>6 млн</span>
-                <span className="font-medium text-sm" style={{ color: '#1a3336' }}>100 млн</span>
+              <div className="flex justify-between mt-1">
+                <span className="font-medium text-xs" style={{ color: '#1a3336' }}>6 млн</span>
+                <span className="font-medium text-xs" style={{ color: '#1a3336' }}>100 млн</span>
               </div>
             </div>
 
-            {/* Property type */}
-            <div className="rounded-xl p-6 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-              <label className="font-bold text-sm block mb-3" style={{ color: '#074952' }}>Тип объекта</label>
-              <div className="grid grid-cols-3 gap-3">
+            {/* Property type — horizontal pill buttons */}
+            <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+              <label className="font-bold text-sm block mb-2" style={{ color: '#074952' }}>Тип объекта</label>
+              <div className="flex gap-2">
                 {propertyTypes.map((pt) => (
                   <button
                     key={pt.value}
                     onClick={() => setPropType(pt.value)}
-                    className="flex flex-col items-start gap-1.5 p-4 rounded-xl border-2 text-left transition-all duration-200"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-2 rounded-lg border-2 transition-all duration-200 min-w-0"
                     style={{
                       borderColor: propType === pt.value ? '#074952' : '#e8f0f1',
                       backgroundColor: propType === pt.value ? '#074952' : '#f9f8f9',
                     }}
                   >
-                    <Icon name={pt.icon} size={18} style={{ color: propType === pt.value ? '#ffe1a2' : '#074952' }} />
-                    <div className="font-bold text-sm" style={{ color: propType === pt.value ? '#ffffff' : '#074952' }}>{pt.label}</div>
-                    <div className="font-medium text-sm" style={{ color: propType === pt.value ? '#ffe1a2' : '#1a3336' }}>~{pt.yield}%/год</div>
+                    <Icon name={pt.icon} size={15} style={{ color: propType === pt.value ? '#ffe1a2' : '#074952', flexShrink: 0 }} />
+                    <div className="min-w-0">
+                      <div className="font-bold leading-tight truncate" style={{ color: propType === pt.value ? '#ffffff' : '#074952', fontSize: '0.78rem' }}>{pt.label}</div>
+                      <div className="font-medium leading-tight" style={{ color: propType === pt.value ? '#ffe1a2' : '#1a3336', fontSize: '0.72rem' }}>~{pt.yield}%</div>
+                    </div>
                   </button>
                 ))}
               </div>
             </div>
 
             {/* Location */}
-            <div className="rounded-xl p-6 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-              <label className="font-bold text-sm block mb-3" style={{ color: '#074952' }}>Локация</label>
+            <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+              <label className="font-bold text-sm block mb-2" style={{ color: '#074952' }}>Локация</label>
               <div className="flex flex-wrap gap-2">
                 {locations.map((loc) => (
                   <button
                     key={loc.value}
                     onClick={() => setLocation(loc.value)}
-                    className="font-bold text-sm px-4 py-2 rounded-lg border-2 transition-all duration-200"
+                    className="font-bold text-sm px-3 py-1.5 rounded-lg border-2 transition-all duration-200"
                     style={{
                       borderColor: location === loc.value ? '#074952' : '#e8f0f1',
                       backgroundColor: location === loc.value ? '#074952' : '#f9f8f9',
@@ -128,129 +130,106 @@ const Calculator = () => {
               </div>
             </div>
 
-            {/* Horizon */}
-            <div className="rounded-xl p-6 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-              <div className="flex items-center justify-between mb-3">
-                <label className="font-bold text-sm" style={{ color: '#074952' }}>Горизонт инвестирования</label>
-                <span className="font-extrabold" style={{ color: '#074952', fontSize: '1.2rem' }}>
-                  {years} {years === 1 ? 'год' : years < 5 ? 'года' : 'лет'}
-                </span>
+            {/* Horizon + Tax — two columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="font-bold text-sm" style={{ color: '#074952' }}>Горизонт</label>
+                  <span className="font-extrabold text-sm" style={{ color: '#074952' }}>
+                    {years} {years === 1 ? 'год' : years < 5 ? 'года' : 'лет'}
+                  </span>
+                </div>
+                <div className="flex gap-1.5">
+                  {[1, 3, 5, 7, 10].map((y) => (
+                    <button
+                      key={y}
+                      onClick={() => setYears(y)}
+                      className="flex-1 py-2 rounded-lg font-bold text-sm border-2 transition-all duration-200"
+                      style={{
+                        borderColor: years === y ? '#074952' : '#e8f0f1',
+                        backgroundColor: years === y ? '#074952' : '#f9f8f9',
+                        color: years === y ? '#ffffff' : '#1a3336',
+                      }}
+                    >
+                      {y}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="flex gap-2">
-                {[1, 3, 5, 7, 10].map((y) => (
-                  <button
-                    key={y}
-                    onClick={() => setYears(y)}
-                    className="flex-1 py-3 rounded-xl font-bold text-sm border-2 transition-all duration-200"
-                    style={{
-                      borderColor: years === y ? '#074952' : '#e8f0f1',
-                      backgroundColor: years === y ? '#074952' : '#f9f8f9',
-                      color: years === y ? '#ffffff' : '#1a3336',
-                    }}
-                  >
-                    {y}
-                  </button>
-                ))}
-              </div>
-            </div>
 
-            {/* Tax optimization */}
-            <div className="rounded-xl p-5 border-2 flex items-center justify-between gap-4" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-              <div>
-                <div className="font-bold text-sm" style={{ color: '#074952' }}>Налоговая оптимизация</div>
-                <div className="font-medium text-sm mt-0.5" style={{ color: '#1a3336' }}>Переход с 13% НДФЛ на 6% УСН (ИП)</div>
+              <div className="rounded-xl p-4 border-2 flex items-center justify-between gap-3" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+                <div>
+                  <div className="font-bold text-sm" style={{ color: '#074952' }}>Налог. оптимизация</div>
+                  <div className="font-medium text-xs mt-0.5" style={{ color: '#1a3336' }}>13% → 6% (ИП/УСН)</div>
+                </div>
+                <button
+                  onClick={() => setTaxOptimize(!taxOptimize)}
+                  className="w-12 h-6 rounded-full transition-all duration-300 relative flex-shrink-0"
+                  style={{ backgroundColor: taxOptimize ? '#074952' : '#dde8ea' }}
+                >
+                  <div
+                    className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-all duration-300"
+                    style={{ left: taxOptimize ? '26px' : '2px' }}
+                  />
+                </button>
               </div>
-              <button
-                onClick={() => setTaxOptimize(!taxOptimize)}
-                className="w-12 h-6 rounded-full transition-all duration-300 relative flex-shrink-0"
-                style={{ backgroundColor: taxOptimize ? '#074952' : '#dde8ea' }}
-              >
-                <div
-                  className="w-5 h-5 bg-white rounded-full shadow absolute top-0.5 transition-all duration-300"
-                  style={{ left: taxOptimize ? '26px' : '2px' }}
-                />
-              </button>
             </div>
           </div>
 
           {/* Results */}
           <div className="lg:col-span-2 lg:sticky lg:top-6">
-            <div className="rounded-2xl p-6 md:p-7" style={{ backgroundColor: '#074952' }}>
-              <div className="flex items-center gap-2 mb-6 pb-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                <Icon name="Calculator" size={18} style={{ color: '#ffe1a2' }} />
+            <div className="rounded-2xl p-5" style={{ backgroundColor: '#074952' }}>
+              <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                <Icon name="Calculator" size={16} style={{ color: '#ffe1a2' }} />
                 <span className="font-bold text-sm uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.65)' }}>Результат</span>
               </div>
 
               {/* Main metric */}
-              <div className="text-center mb-6 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
-                <div className="font-medium text-sm mb-2" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              <div className="text-center mb-4 pb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
+                <div className="font-medium text-sm mb-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   Общая доходность за {years} лет
                 </div>
-                <div className="font-extrabold" style={{ color: '#ffe1a2', fontSize: '3.8rem', lineHeight: '1', fontFamily: 'Mulish, sans-serif' }}>
+                <div className="font-extrabold" style={{ color: '#ffe1a2', fontSize: '3.2rem', lineHeight: '1', fontFamily: 'Mulish, sans-serif' }}>
                   {results.totalReturn}%
                 </div>
-                <div className="font-medium text-sm mt-2" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <div className="font-medium text-sm mt-1.5" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   {formatMoney(results.totalAfterTax)} чистый доход
                 </div>
               </div>
 
               {/* Breakdown */}
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {[
                   { label: 'Пассивный доход в месяц', value: formatMoney(results.monthlyRental), icon: 'Wallet' },
                   { label: 'Аренда за период', value: formatMoney(results.totalRental), icon: 'CalendarDays' },
                   { label: 'Рост стоимости объекта', value: `+${formatMoney(results.capitalGain)}`, icon: 'TrendingUp' },
                   ...(taxOptimize ? [{ label: 'Экономия на налогах', value: `+${formatMoney(results.taxSaved)}`, icon: 'BadgePercent' }] : []),
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between pb-4" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div key={i} className="flex items-center justify-between pb-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
                     <div className="flex items-center gap-2">
-                      <Icon name={item.icon} size={14} style={{ color: '#ffe1a2', opacity: 0.7 }} />
-                      <span className="font-medium text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{item.label}</span>
+                      <Icon name={item.icon} size={13} style={{ color: '#ffe1a2', opacity: 0.7 }} />
+                      <span className="font-medium text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>{item.label}</span>
                     </div>
                     <span className="font-bold text-sm" style={{ color: '#ffffff' }}>{item.value}</span>
                   </div>
                 ))}
               </div>
 
-              {taxOptimize && (
-                <div className="mt-4 p-3 rounded-xl flex items-start gap-2" style={{ backgroundColor: 'rgba(255,225,162,0.12)' }}>
-                  <Icon name="Info" size={13} style={{ color: '#ffe1a2', marginTop: '2px', flexShrink: 0 }} />
-                  <p className="font-medium text-sm" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6' }}>
-                    Экономия на налогах за {years} лет: {formatMoney(results.taxSaved)}
-                  </p>
-                </div>
-              )}
-
               <a
                 href="https://t.me/+Oikjo-gGhtxiZjZi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full mt-6 font-bold rounded-xl py-4 transition-all duration-200 hover:opacity-90"
-                style={{ backgroundColor: '#ffe1a2', color: '#074952', fontSize: '0.95rem' }}
+                className="flex items-center justify-center gap-2 w-full mt-4 font-bold rounded-xl py-3.5 transition-all duration-200 hover:opacity-90"
+                style={{ backgroundColor: '#ffe1a2', color: '#074952', fontSize: '0.9rem' }}
               >
                 Получить персональный разбор
-                <Icon name="ArrowRight" size={15} />
+                <Icon name="ArrowRight" size={14} />
               </a>
 
-              <p className="font-medium text-sm text-center mt-3" style={{ color: 'rgba(255,255,255,0.3)' }}>
+              <p className="font-medium text-xs text-center mt-2" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 * Расчёт ориентировочный. Уточняйте у эксперта.
               </p>
             </div>
-          </div>
-        </div>
-
-        {/* Note */}
-        <div className="mt-6 rounded-xl p-5 border-2 flex gap-4 items-start" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#074952' }}>
-            <Icon name="Lightbulb" size={16} style={{ color: '#ffe1a2' }} />
-          </div>
-          <div>
-            <div className="font-bold text-sm mb-1" style={{ color: '#074952' }}>Начать можно и с 1 млн рублей</div>
-            <p className="text-body-lg" style={{ color: '#5a7a7e' }}>
-              При небольшом стартовом взносе пассивный доход будет символическим или нулевым — ипотечный платёж съедает аренду.
-              Но через 15–20 лет вы становитесь полноправным владельцем недвижимости стоимостью до 15 млн рублей,
-              вложив в покупку всего 1 млн. Это стратегия долгосрочного накопления, а не текущего дохода.
-            </p>
           </div>
         </div>
       </div>
