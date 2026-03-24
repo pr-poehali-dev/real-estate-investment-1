@@ -232,6 +232,19 @@ const Calculator = () => {
             </div>
           </div>
         </div>
+
+        {/* Note */}
+        <div className="mt-4 rounded-xl p-4 border-2 flex gap-3 items-start" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#074952' }}>
+            <Icon name="Lightbulb" size={15} style={{ color: '#ffe1a2' }} />
+          </div>
+          <div>
+            <div className="font-bold text-sm mb-1" style={{ color: '#074952' }}>Начать можно и с 1 млн рублей</div>
+            <p className="font-medium text-sm" style={{ color: '#1a3336', lineHeight: '1.6' }}>
+              Пассивный доход в этом случае будет символическим или нулевым — ипотечный платёж съедает аренду. Но через 15–20 лет вы станете владельцем недвижимости стоимостью до 15 млн рублей, вложив в покупку всего 1 млн.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
