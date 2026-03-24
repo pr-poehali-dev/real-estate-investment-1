@@ -10,7 +10,7 @@ const HeroSection = () => {
           backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/6c6a1881-f056-4b5c-a7fb-1fc0043c5541.jpg')`,
         }}
       />
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(7,73,82,0.82) 0%, rgba(7,73,82,0.65) 50%, rgba(7,73,82,0.92) 100%)' }} />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(rgb(7 73 82 / 6%) 0%, rgba(7, 73, 82, 0.65) 50%, rgb(7 73 82 / 30%) 100%)' }} />
 
       {/* Nav */}
       <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
