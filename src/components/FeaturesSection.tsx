@@ -22,7 +22,7 @@ const FeaturesSection = () => {
   return (
     <section className="py-16 md:py-24" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-12">
+        <div className="reveal text-center mb-12">
           <div className="section-label justify-center">Что вы получаете</div>
           <h2 className="text-heading" style={{ color: '#18352e' }}>
             Честный канал об инвестициях<br className="hidden md:block" /> в недвижимость
@@ -36,7 +36,7 @@ const FeaturesSection = () => {
           {features.map((f, i) => (
             <div
               key={i}
-              className="rounded-xl p-7 border-2 transition-all duration-200 hover:shadow-lg"
+              className={`reveal reveal-d${i + 1} rounded-xl p-7 border-2 transition-all duration-200 hover:shadow-lg`}
               style={{ borderColor: '#e8f0f1', backgroundColor: '#f9f8f9' }}
             >
               <div

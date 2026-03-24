@@ -11,24 +11,12 @@ const Index = () => {
 
   return (
     <main className="min-h-screen">
-      <div className="page-load" style={{ animationDelay: '0s' }}>
-        <HeroSection />
-      </div>
-      <div className="reveal reveal-delay-1">
-        <FeaturesSection />
-      </div>
-      <div className="reveal reveal-delay-1">
-        <InvestorLevels />
-      </div>
-      <div className="reveal reveal-delay-1">
-        <Calculator />
-      </div>
-      <div className="reveal reveal-delay-1">
-        <AboutSection />
-      </div>
-      <div className="reveal reveal-delay-1">
-        <FooterSection />
-      </div>
+      <HeroSection />
+      <FeaturesSection />
+      <InvestorLevels />
+      <Calculator />
+      <AboutSection />
+      <FooterSection />
     </main>
   );
 };

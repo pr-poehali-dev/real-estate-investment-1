@@ -34,7 +34,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left */}
-            <div>
+            <div className="reveal">
               <div className="section-label">О нас</div>
               <h2 className="text-heading mb-8" style={{ color: '#18352e' }}>
                 Команда экспертов с{' '}
@@ -114,7 +114,7 @@ const AboutSection = () => {
             </div>
 
             {/* Right — locations */}
-            <div className="rounded-2xl p-7 border-2" style={{ backgroundColor: '#f9f8f9', borderColor: '#e8f0f1' }}>
+            <div className="reveal reveal-d2 rounded-2xl p-7 border-2" style={{ backgroundColor: '#f9f8f9', borderColor: '#e8f0f1' }}>
               <div className="flex items-center gap-3 mb-6 pb-5" style={{ borderBottom: '1px solid #e8f0f1' }}>
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#18352e' }}>
                   <Icon name="MapPin" size={16} style={{ color: '#ffe1a2' }} />
@@ -149,7 +149,7 @@ const AboutSection = () => {
       {/* Bonuses — teal bg */}
       <div className="py-14 md:py-20 px-6 md:px-12" style={{ backgroundColor: '#18352e' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="reveal text-center mb-10">
             <div className="section-label-white justify-center">Материалы</div>
             <h3 className="text-heading" style={{ color: '#ffffff' }}>Что ещё важно знать?</h3>
             <p className="text-body-lg mt-3 max-w-sm mx-auto" style={{ color: 'rgba(255,255,255,0.92)' }}>
@@ -158,10 +158,10 @@ const AboutSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            {bonuses.map((b) => (
+            {bonuses.map((b, i) => (
               <div
                 key={b.num}
-                className="rounded-2xl p-6 border transition-all duration-200 hover:border-yellow-200/40"
+                className={`reveal reveal-d${i + 1} rounded-2xl p-6 border transition-all duration-200 hover:border-yellow-200/40`}
                 style={{ backgroundColor: 'rgba(255,255,255,0.07)', borderColor: 'rgba(255,225,162,0.18)' }}
               >
                 <div className="flex items-center justify-between mb-5">

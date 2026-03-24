@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0" style={{ background: 'linear-gradient(#2a221861 0%, #2a2218bf 100%)' }} />
 
       {/* Nav */}
-      <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
+      <nav className="hero-nav relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#ffe1a2' }}>
             <Icon name="TrendingUp" size={16} style={{ color: '#18352e' }} />
@@ -28,12 +28,12 @@ const HeroSection = () => {
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
         <div className="max-w-3xl">
-          <h1 className="text-display mb-5" style={{ color: '#ffffff' }}>
+          <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
             Инвестиции в недвижимость{' '}
             <span style={{ color: '#ffe1a2' }}>на юге России</span>
           </h1>
 
-          <p className="text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>
+          <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>
             Честный разбор. Реальные цифры, кейсы, налоговые лайфхаки.
           </p>
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
               href="https://t.me/+Oikjo-gGhtxiZjZi"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
+              className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
             >
               <Icon name="Send" size={16} />
@@ -52,7 +52,7 @@ const HeroSection = () => {
               href="https://t.me/+T_max_channel"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
+              className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
             >
               <Icon name="Zap" size={16} />

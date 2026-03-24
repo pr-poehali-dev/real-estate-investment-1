@@ -53,7 +53,7 @@ const Calculator = () => {
   return (
     <section id="calculator" className="py-10 md:py-14" style={{ backgroundColor: '#f9f8f9' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-7">
+        <div className="reveal text-center mb-7">
           <div className="section-label justify-center">Инструмент</div>
           <h2 className="text-heading" style={{ color: '#18352e' }}>Калькулятор доходности</h2>
           <p className="text-body-lg mt-2 max-w-md mx-auto" style={{ color: '#1a2e30' }}>
@@ -63,7 +63,7 @@ const Calculator = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 items-start">
           {/* Inputs */}
-          <div className="lg:col-span-3 space-y-3">
+          <div className="reveal reveal-d1 lg:col-span-3 space-y-3">
 
             {/* Budget */}
             <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
@@ -177,7 +177,7 @@ const Calculator = () => {
           </div>
 
           {/* Results */}
-          <div className="lg:col-span-2 lg:sticky lg:top-6">
+          <div className="reveal reveal-d2 lg:col-span-2 lg:sticky lg:top-6">
             <div className="rounded-2xl p-5" style={{ backgroundColor: '#18352e' }}>
               <div className="flex items-center gap-2 mb-4 pb-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.12)' }}>
                 <Icon name="Calculator" size={16} style={{ color: '#ffe1a2' }} />

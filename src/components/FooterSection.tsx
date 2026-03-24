@@ -4,7 +4,7 @@ const FooterSection = () => {
   return (
     <footer style={{ backgroundColor: '#f9f8f9', borderTop: '2px solid #e8f0f1' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+        <div className="reveal flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#18352e' }}>
               <Icon name="TrendingUp" size={15} style={{ color: '#ffe1a2' }} />

@@ -65,7 +65,7 @@ const InvestorLevels = () => {
     <section>
       {/* Section header — light bg */}
       <div className="py-14 md:py-20 px-6 md:px-12" style={{ backgroundColor: '#f9f8f9' }}>
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="reveal max-w-6xl mx-auto text-center">
           <div className="section-label justify-center">Кому будет полезен канал</div>
           <h2 className="text-heading" style={{ color: '#18352e' }}>
             Сообщество для тех, кто хочет<br />
@@ -99,7 +99,7 @@ const InvestorLevels = () => {
           <div key={idx} className="py-12 md:py-16 px-6 md:px-12" style={{ backgroundColor: bg }}>
             <div className="max-w-6xl mx-auto">
               {/* Level header */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
+              <div className="reveal flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
                 <div className="flex items-center gap-4">
                   <span className="font-extrabold" style={{ color: level.dark ? 'rgba(255,225,162,0.2)' : 'rgba(24,53,46,0.12)', fontSize: '3.5rem', lineHeight: '1', fontFamily: 'Mulish, sans-serif' }}>
                     {level.num}
@@ -128,7 +128,7 @@ const InvestorLevels = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Left: pains + cta */}
-                <div className="rounded-xl p-6 border" style={{ backgroundColor: cardBg, borderColor: cardBorder }}>
+                <div className="reveal reveal-d1 rounded-xl p-6 border" style={{ backgroundColor: cardBg, borderColor: cardBorder }}>
                   <p className="font-bold text-xs uppercase tracking-wider mb-5" style={{ color: labelColor }}>
                     Это про вас?
                   </p>
@@ -150,7 +150,7 @@ const InvestorLevels = () => {
                 </div>
 
                 {/* Right: posts */}
-                <div>
+                <div className="reveal reveal-d2">
                   <p className="font-bold text-xs uppercase tracking-wider mb-5" style={{ color: labelColor }}>
                     Начните с материалов в канале:
                   </p>
