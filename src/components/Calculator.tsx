@@ -88,22 +88,20 @@ const Calculator = () => {
             {/* Property type — horizontal pill buttons */}
             <div className="rounded-xl p-4 border-2" style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}>
               <label className="font-bold text-sm block mb-2" style={{ color: '#074952' }}>Тип объекта</label>
-              <div className="flex gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {propertyTypes.map((pt) => (
                   <button
                     key={pt.value}
                     onClick={() => setPropType(pt.value)}
-                    className="flex-1 flex items-center justify-center gap-2 py-2.5 px-2 rounded-lg border-2 transition-all duration-200 min-w-0"
+                    className="flex flex-col items-center justify-center gap-1 py-3 px-1 rounded-lg border-2 transition-all duration-200 text-center"
                     style={{
                       borderColor: propType === pt.value ? '#074952' : '#e8f0f1',
                       backgroundColor: propType === pt.value ? '#074952' : '#f9f8f9',
                     }}
                   >
-                    <Icon name={pt.icon} size={15} style={{ color: propType === pt.value ? '#ffe1a2' : '#074952', flexShrink: 0 }} />
-                    <div className="min-w-0">
-                      <div className="font-bold leading-tight truncate" style={{ color: propType === pt.value ? '#ffffff' : '#074952', fontSize: '0.78rem' }}>{pt.label}</div>
-                      <div className="font-medium leading-tight" style={{ color: propType === pt.value ? '#ffe1a2' : '#1a3336', fontSize: '0.72rem' }}>~{pt.yield}%</div>
-                    </div>
+                    <Icon name={pt.icon} size={18} style={{ color: propType === pt.value ? '#ffe1a2' : '#074952' }} />
+                    <div className="font-bold" style={{ color: propType === pt.value ? '#ffffff' : '#074952', fontSize: '0.75rem', lineHeight: '1.3' }}>{pt.label}</div>
+                    <div className="font-medium" style={{ color: propType === pt.value ? '#ffe1a2' : '#1a3336', fontSize: '0.7rem' }}>~{pt.yield}%</div>
                   </button>
                 ))}
               </div>
