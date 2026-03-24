@@ -7,44 +7,44 @@
 @layer base {
   :root {
     --background: 300 3% 98%;
-    --foreground: 160 55% 12%;
+    --foreground: 162 38% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 55% 12%;
+    --card-foreground: 162 38% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 55% 12%;
+    --popover-foreground: 162 38% 10%;
 
-    --primary: 160 55% 23%;
+    --primary: 162 38% 15%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 300 3% 94%;
-    --secondary-foreground: 160 55% 12%;
+    --secondary-foreground: 162 38% 10%;
 
     --muted: 300 3% 94%;
-    --muted-foreground: 160 20% 40%;
+    --muted-foreground: 162 20% 40%;
 
-    --accent: 160 55% 23%;
+    --accent: 162 38% 15%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 160 15% 88%;
-    --input: 160 15% 88%;
-    --ring: 160 55% 23%;
+    --border: 162 15% 88%;
+    --input: 162 15% 88%;
+    --ring: 162 38% 15%;
 
     --radius: 0.75rem;
 
     /* Brand colors */
-    --teal: #1a5c4a;
-    --teal-dark: #134a3a;
-    --teal-light: #22785f;
+    --teal: #18352e;
+    --teal-dark: #0f241f;
+    --teal-light: #224d42;
     --yellow: #ffe1a2;
     --yellow-dark: #f5c96a;
     --bg-main: #f9f8f9;
     --bg-white: #ffffff;
-    --text-dark: #1a5c4a;
+    --text-dark: #18352e;
     --text-body: #2d4a3e;
     --text-muted: #5a7a6e;
   }
@@ -174,7 +174,7 @@
     background: var(--teal);
     cursor: pointer;
     border: 3px solid white;
-    box-shadow: 0 1px 6px rgba(26, 92, 74, 0.35);
+    box-shadow: 0 1px 6px rgba(24, 53, 46, 0.35);
   }
 
   input[type="range"]::-moz-range-thumb {
@@ -184,6 +184,6 @@
     background: var(--teal);
     cursor: pointer;
     border: 3px solid white;
-    box-shadow: 0 1px 6px rgba(26, 92, 74, 0.35);
+    box-shadow: 0 1px 6px rgba(24, 53, 46, 0.35);
   }
 }

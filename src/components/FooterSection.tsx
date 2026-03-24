@@ -6,10 +6,10 @@ const FooterSection = () => {
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1a5c4a' }}>
+            <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#18352e' }}>
               <Icon name="TrendingUp" size={15} style={{ color: '#ffe1a2' }} />
             </div>
-            <span className="font-bold" style={{ color: '#1a5c4a', fontSize: '1.05rem' }}>
+            <span className="font-bold" style={{ color: '#18352e', fontSize: '1.05rem' }}>
               Южный Берег Капитала
             </span>
           </div>
@@ -20,7 +20,7 @@ const FooterSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
-              style={{ borderColor: '#1a5c4a', color: '#1a5c4a' }}
+              style={{ borderColor: '#18352e', color: '#18352e' }}
             >
               <Icon name="Send" size={14} />
               Telegram-канал
@@ -30,7 +30,7 @@ const FooterSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: '#1a5c4a', color: '#ffe1a2' }}
+              style={{ backgroundColor: '#18352e', color: '#ffe1a2' }}
             >
               <Icon name="Zap" size={14} />
               Перейти в Max

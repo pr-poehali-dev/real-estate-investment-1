@@ -2,7 +2,7 @@ import Icon from '@/components/ui/icon';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#1a5c4a' }}>
+    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -16,7 +16,7 @@ const HeroSection = () => {
       <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#ffe1a2' }}>
-            <Icon name="TrendingUp" size={16} style={{ color: '#1a5c4a' }} />
+            <Icon name="TrendingUp" size={16} style={{ color: '#18352e' }} />
           </div>
           <span className="font-bold text-white" style={{ fontSize: '1.05rem' }}>
             Южный Берег Капитала
@@ -43,7 +43,7 @@ const HeroSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: '#ffe1a2', color: '#1a5c4a', fontSize: '0.95rem' }}
+              style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
             >
               <Icon name="Send" size={16} />
               Перейти в TG-канал

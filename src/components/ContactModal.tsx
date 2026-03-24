@@ -37,7 +37,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ backgroundColor: 'rgba(26,92,74,0.7)', backdropFilter: 'blur(4px)' }}
+      style={{ backgroundColor: 'rgba(24,53,46,0.7)', backdropFilter: 'blur(4px)' }}
       onClick={onClose}
     >
       <div
@@ -50,22 +50,22 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-200 hover:opacity-70"
           style={{ backgroundColor: '#f9f8f9' }}
         >
-          <Icon name="X" size={16} style={{ color: '#1a5c4a' }} />
+          <Icon name="X" size={16} style={{ color: '#18352e' }} />
         </button>
 
         {status === 'success' ? (
           <div className="text-center py-6">
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style={{ backgroundColor: '#e8f7f0' }}>
-              <Icon name="CheckCircle" size={32} style={{ color: '#1a5c4a' }} />
+              <Icon name="CheckCircle" size={32} style={{ color: '#18352e' }} />
             </div>
-            <h3 className="font-bold text-xl mb-2" style={{ color: '#1a5c4a' }}>Заявка отправлена!</h3>
+            <h3 className="font-bold text-xl mb-2" style={{ color: '#18352e' }}>Заявка отправлена!</h3>
             <p className="font-medium" style={{ color: '#1a3336', fontSize: '0.95rem' }}>
               Мы свяжемся с вами в ближайшее время для персонального разбора.
             </p>
             <button
               onClick={onClose}
               className="mt-6 font-bold px-8 py-3 rounded-xl transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: '#1a5c4a', color: '#ffe1a2', fontSize: '0.95rem' }}
+              style={{ backgroundColor: '#18352e', color: '#ffe1a2', fontSize: '0.95rem' }}
             >
               Закрыть
             </button>
@@ -74,10 +74,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           <>
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1a5c4a' }}>
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#18352e' }}>
                   <Icon name="MessageCircle" size={16} style={{ color: '#ffe1a2' }} />
                 </div>
-                <h3 className="font-bold text-xl" style={{ color: '#1a5c4a' }}>Персональный разбор</h3>
+                <h3 className="font-bold text-xl" style={{ color: '#18352e' }}>Персональный разбор</h3>
               </div>
               <p className="font-medium" style={{ color: '#1a3336', fontSize: '0.9rem' }}>
                 Оставьте контакты — эксперт свяжется с вами и ответит на все вопросы
@@ -86,7 +86,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block font-bold text-sm mb-1.5" style={{ color: '#1a5c4a' }}>Имя</label>
+                <label className="block font-bold text-sm mb-1.5" style={{ color: '#18352e' }}>Имя</label>
                 <input
                   type="text"
                   required
@@ -98,7 +98,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 />
               </div>
               <div>
-                <label className="block font-bold text-sm mb-1.5" style={{ color: '#1a5c4a' }}>Телефон</label>
+                <label className="block font-bold text-sm mb-1.5" style={{ color: '#18352e' }}>Телефон</label>
                 <input
                   type="tel"
                   required
@@ -120,7 +120,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 type="submit"
                 disabled={status === 'loading'}
                 className="w-full font-bold py-3.5 rounded-xl transition-all duration-200 hover:opacity-90 disabled:opacity-60"
-                style={{ backgroundColor: '#1a5c4a', color: '#ffe1a2', fontSize: '0.95rem' }}
+                style={{ backgroundColor: '#18352e', color: '#ffe1a2', fontSize: '0.95rem' }}
               >
                 {status === 'loading' ? 'Отправляем...' : 'Получить разбор'}
               </button>
