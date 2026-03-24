@@ -178,16 +178,28 @@ const InvestorLevels = () => {
                     ))}
                   </div>
 
-                  <a
-                    href="https://t.me/+Oikjo-gGhtxiZjZi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full font-bold px-6 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
-                    style={{ backgroundColor: btnBg, color: btnColor, fontSize: '0.95rem' }}
-                  >
-                    <Icon name="Send" size={15} />
-                    Перейти в TG-канал
-                  </a>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="https://t.me/+Oikjo-gGhtxiZjZi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 font-bold px-6 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
+                      style={{ backgroundColor: btnBg, color: btnColor, fontSize: '0.95rem' }}
+                    >
+                      <Icon name="Send" size={15} />
+                      Перейти в TG-канал
+                    </a>
+                    <a
+                      href="https://t.me/+Oikjo-gGhtxiZjZi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 flex-1 font-bold px-6 py-4 rounded-xl border-2 transition-all duration-200 hover:opacity-80"
+                      style={{ borderColor: btnBg, color: btnBg, backgroundColor: 'transparent', fontSize: '0.95rem', ...(level.dark ? { borderColor: '#ffe1a2', color: '#ffe1a2' } : { borderColor: '#074952', color: '#074952' }) }}
+                    >
+                      <Icon name="Zap" size={15} />
+                      Перейти в Max
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

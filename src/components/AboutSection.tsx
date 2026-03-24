@@ -121,7 +121,7 @@ const AboutSection = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://t.me/+Oikjo-gGhtxiZjZi"
               target="_blank"
@@ -131,6 +131,16 @@ const AboutSection = () => {
             >
               <Icon name="Send" size={16} />
               Перейти в TG-канал
+            </a>
+            <a
+              href="https://t.me/+Oikjo-gGhtxiZjZi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-xl border-2 transition-all duration-200 hover:opacity-80"
+              style={{ borderColor: '#ffe1a2', color: '#ffe1a2', fontSize: '0.95rem' }}
+            >
+              <Icon name="Zap" size={16} />
+              Перейти в Max
             </a>
           </div>
         </div>

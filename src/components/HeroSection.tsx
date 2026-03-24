@@ -22,16 +22,7 @@ const HeroSection = () => {
             Южный Берег Капитала
           </span>
         </div>
-        <a
-          href="https://t.me/+Oikjo-gGhtxiZjZi"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200"
-          style={{ backgroundColor: 'rgba(255,225,162,0.15)', color: '#ffe1a2', border: '1.5px solid rgba(255,225,162,0.4)' }}
-        >
-          <Icon name="Send" size={14} />
-          Telegram-канал
-        </a>
+
       </nav>
 
       {/* Hero content */}
@@ -58,12 +49,14 @@ const HeroSection = () => {
               Перейти в TG-канал
             </a>
             <a
-              href="#calculator"
+              href="https://t.me/+T_max_channel"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
             >
-              <Icon name="Calculator" size={16} />
-              Рассчитать доходность
+              <Icon name="Zap" size={16} />
+              Перейти в Max
             </a>
           </div>
         </div>

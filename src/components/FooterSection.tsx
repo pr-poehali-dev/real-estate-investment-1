@@ -14,16 +14,28 @@ const FooterSection = () => {
             </span>
           </div>
 
-          <a
-            href="https://t.me/+Oikjo-gGhtxiZjZi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
-            style={{ borderColor: '#074952', color: '#074952' }}
-          >
-            <Icon name="Send" size={14} />
-            Telegram-канал
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <a
+              href="https://t.me/+Oikjo-gGhtxiZjZi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
+              style={{ borderColor: '#074952', color: '#074952' }}
+            >
+              <Icon name="Send" size={14} />
+              Telegram-канал
+            </a>
+            <a
+              href="https://t.me/+Oikjo-gGhtxiZjZi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:opacity-90"
+              style={{ backgroundColor: '#074952', color: '#ffe1a2' }}
+            >
+              <Icon name="Zap" size={14} />
+              Перейти в Max
+            </a>
+          </div>
         </div>
 
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-3" style={{ borderTop: '1px solid #e8f0f1' }}>

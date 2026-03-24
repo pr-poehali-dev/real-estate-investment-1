@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import Icon from '@/components/ui/icon';
+import ContactModal from '@/components/ContactModal';
 
 type PropertyType = 'apartment' | 'commercial' | 'hotel';
 
@@ -28,6 +29,7 @@ const Calculator = () => {
   const [location, setLocation] = useState('sochi');
   const [years, setYears] = useState(5);
   const [taxOptimize, setTaxOptimize] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const results = useMemo(() => {
     const pt = propertyTypes.find((p) => p.value === propType)!;
@@ -213,16 +215,14 @@ const Calculator = () => {
                 ))}
               </div>
 
-              <a
-                href="https://t.me/+Oikjo-gGhtxiZjZi"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setModalOpen(true)}
                 className="flex items-center justify-center gap-2 w-full mt-4 font-bold rounded-xl py-3.5 transition-all duration-200 hover:opacity-90"
                 style={{ backgroundColor: '#ffe1a2', color: '#074952', fontSize: '0.9rem' }}
               >
                 Получить персональный разбор
                 <Icon name="ArrowRight" size={14} />
-              </a>
+              </button>
 
               <p className="font-medium text-xs text-center mt-2" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 * Расчёт ориентировочный. Уточняйте у эксперта.
@@ -244,6 +244,7 @@ const Calculator = () => {
           </div>
         </div>
       </div>
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 };
