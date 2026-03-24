@@ -39,11 +39,11 @@ const AboutSection = () => {
               { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта', center: true },
               { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта', center: false },
             ].map((person, i) => (
-              <div key={i} className="flex flex-col" style={person.center ? { transform: 'translateY(-12px)' } : {}}>
+              <div key={i} className="flex flex-col">
                 <div
                   className="rounded-2xl overflow-hidden aspect-[3/4] border"
                   style={person.center
-                    ? { borderColor: '#ffe1a2', borderWidth: '2px', boxShadow: '0 8px 32px rgba(24,53,46,0.18), 0 0 0 4px rgba(255,225,162,0.18)' }
+                    ? { borderColor: 'transparent', borderWidth: '2px', boxShadow: '0 0 0 2px #ffe1a2, 0 8px 40px rgba(255,225,162,0.45), 0 4px 20px rgba(24,53,46,0.2)' }
                     : { borderColor: '#e8f0f1', borderWidth: '1px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }
                   }
                 >
