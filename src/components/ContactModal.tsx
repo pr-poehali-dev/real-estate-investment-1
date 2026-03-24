@@ -6,15 +6,42 @@ interface ContactModalProps {
   onClose: () => void;
 }
 
+const formatPhone = (raw: string): string => {
+  const digits = raw.replace(/\D/g, '');
+  let d = digits;
+  if (d.startsWith('8')) d = '7' + d.slice(1);
+  if (!d.startsWith('7') && d.length > 0) d = '7' + d;
+
+  let result = '';
+  if (d.length > 0) result += '+7';
+  if (d.length > 1) result += ' (' + d.slice(1, Math.min(4, d.length));
+  if (d.length >= 4) result += ') ' + d.slice(4, Math.min(7, d.length));
+  if (d.length >= 7) result += '-' + d.slice(7, Math.min(9, d.length));
+  if (d.length >= 9) result += '-' + d.slice(9, Math.min(11, d.length));
+  return result;
+};
+
+const isPhoneComplete = (phone: string) => phone.replace(/\D/g, '').length === 11;
+
 const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   if (!isOpen) return null;
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(formatPhone(e.target.value));
+    setPhoneError(false);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isPhoneComplete(phone)) {
+      setPhoneError(true);
+      return;
+    }
     setStatus('loading');
     try {
       const res = await fetch('https://functions.poehali.dev/be7ee367-e7cb-4bd8-b97e-ee0739e48c0d', {
@@ -103,11 +130,21 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                   type="tel"
                   required
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={handlePhoneChange}
                   placeholder="+7 (___) ___-__-__"
                   className="w-full px-4 py-3 rounded-xl border-2 font-medium outline-none transition-all duration-200 focus:border-teal-600"
-                  style={{ borderColor: '#e8f0f1', color: '#0d1f21', fontSize: '0.95rem', backgroundColor: '#f9f8f9' }}
+                  style={{
+                    borderColor: phoneError ? '#c0392b' : '#e8f0f1',
+                    color: '#0d1f21',
+                    fontSize: '0.95rem',
+                    backgroundColor: '#f9f8f9',
+                  }}
                 />
+                {phoneError && (
+                  <p className="mt-1.5 text-xs font-medium" style={{ color: '#c0392b' }}>
+                    Введите полный номер в формате +7 (___) ___-__-__
+                  </p>
+                )}
               </div>
 
               {status === 'error' && (

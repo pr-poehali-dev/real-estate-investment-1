@@ -16,7 +16,11 @@ def handler(event: dict, context) -> dict:
     if event.get('httpMethod') == 'OPTIONS':
         return {'statusCode': 200, 'headers': cors_headers, 'body': ''}
 
-    body = json.loads(event.get('body') or '{}')
+    try:
+        body = json.loads(event.get('body') or '{}')
+    except Exception:
+        body = {}
+
     name = body.get('name', '').strip()
     phone = body.get('phone', '').strip()
 
@@ -44,9 +48,24 @@ def handler(event: dict, context) -> dict:
     msg['To'] = ', '.join(recipients)
     msg.attach(MIMEText(html_body, 'html', 'utf-8'))
 
-    with smtplib.SMTP_SSL('smtp.yandex.ru', 465) as server:
-        server.login(smtp_user, smtp_password)
-        server.sendmail(smtp_user, recipients, msg.as_string())
+    try:
+        with smtplib.SMTP_SSL('smtp.yandex.ru', 465) as server:
+            server.login(smtp_user, smtp_password)
+            server.sendmail(smtp_user, recipients, msg.as_string())
+    except smtplib.SMTPAuthenticationError as e:
+        print(f'[SMTP AUTH ERROR] {e}')
+        return {
+            'statusCode': 500,
+            'headers': cors_headers,
+            'body': json.dumps({'error': 'smtp_auth', 'detail': str(e)}, ensure_ascii=False),
+        }
+    except Exception as e:
+        print(f'[SMTP ERROR] {e}')
+        return {
+            'statusCode': 500,
+            'headers': cors_headers,
+            'body': json.dumps({'error': 'smtp_error', 'detail': str(e)}, ensure_ascii=False),
+        }
 
     return {
         'statusCode': 200,
