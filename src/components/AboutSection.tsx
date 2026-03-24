@@ -36,8 +36,8 @@ const AboutSection = () => {
           <div className="grid grid-cols-3 gap-4 mb-12">
             {[
               'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f123d1ba-1f67-4f69-89d0-d5b9717749a2.jpg',
-              'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg',
               'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg',
+              'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg',
             ].map((src, i) => (
               <div key={i} className="rounded-2xl overflow-hidden aspect-[3/4] shadow-sm border" style={{ borderColor: '#e8f0f1' }}>
                 <img src={src} alt="" className="w-full h-full object-cover object-top" />
