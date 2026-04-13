@@ -183,24 +183,24 @@ const AboutSection = () => {
 
           <div className="text-center flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://t.me/+Oikjo-gGhtxiZjZi"
+              href="https://max.ru/id631181836803_biz"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
             >
               <Icon name="Send" size={16} />
-              Перейти в TG-канал
+              Перейти в канал Мах
             </a>
             <a
-              href="https://t.me/+Oikjo-gGhtxiZjZi"
+              href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-xl border-2 transition-all duration-200 hover:opacity-80"
               style={{ borderColor: '#ffe1a2', color: '#ffe1a2', fontSize: '0.95rem' }}
             >
               <Icon name="Zap" size={16} />
-              Перейти в Max
+              Перейти в Мах чат
             </a>
           </div>
         </div>
