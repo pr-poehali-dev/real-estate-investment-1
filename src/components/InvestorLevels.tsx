@@ -97,7 +97,7 @@ const InvestorLevels = () => {
         const btnColor = level.dark ? '#18352e' : '#ffffff';
 
         return (
-          <div key={idx} className="py-12 md:py-16 px-6 md:px-12" style={{ backgroundColor: bg }}>
+          <div key={idx} id={`level-${level.num}`} className="py-12 md:py-16 px-6 md:px-12" style={{ backgroundColor: bg }}>
             <div className="max-w-6xl mx-auto">
               {/* Level header */}
               <div className="reveal flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
