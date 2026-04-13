@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import { reachGoal } from '@/lib/metrika';
 
 const HeroSection = () => {
   return (
@@ -42,6 +43,7 @@ const HeroSection = () => {
               href="https://max.ru/id631181836803_biz"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachGoal('hero_channel_click')}
               className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
             >
@@ -52,6 +54,7 @@ const HeroSection = () => {
               href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachGoal('hero_chat_click')}
               className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
               style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
             >

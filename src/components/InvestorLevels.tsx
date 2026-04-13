@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import { reachGoal } from '@/lib/metrika';
 
 const levels = [
   {
@@ -183,6 +184,7 @@ const InvestorLevels = () => {
                       href="https://max.ru/id631181836803_biz"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => reachGoal(`level_${level.num}_channel_click`)}
                       className="flex items-center justify-center gap-2 flex-1 font-bold px-6 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
                       style={{ backgroundColor: btnBg, color: btnColor, fontSize: '0.95rem' }}
                     >
@@ -193,6 +195,7 @@ const InvestorLevels = () => {
                       href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => reachGoal(`level_${level.num}_chat_click`)}
                       className="flex items-center justify-center gap-2 flex-1 font-bold px-6 py-4 rounded-xl border-2 transition-all duration-200 hover:opacity-80"
                       style={{ borderColor: btnBg, color: btnBg, backgroundColor: 'transparent', fontSize: '0.95rem', ...(level.dark ? { borderColor: '#ffe1a2', color: '#ffe1a2' } : { borderColor: '#18352e', color: '#18352e' }) }}
                     >

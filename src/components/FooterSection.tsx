@@ -1,4 +1,5 @@
 import Icon from '@/components/ui/icon';
+import { reachGoal } from '@/lib/metrika';
 
 const FooterSection = () => {
   return (
@@ -19,6 +20,7 @@ const FooterSection = () => {
               href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachGoal('footer_chat_click')}
               className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
               style={{ borderColor: '#18352e', color: '#18352e' }}
             >
@@ -29,6 +31,7 @@ const FooterSection = () => {
               href="https://max.ru/id631181836803_biz"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => reachGoal('footer_channel_click')}
               className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#18352e', color: '#ffe1a2' }}
             >
