@@ -30,8 +30,8 @@ const HeroSection = () => {
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
         <div className="max-w-3xl">
           <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-            Инвестиции в недвижимость{' '}
-            <span style={{ color: '#ffe1a2' }}>на юге России</span>
+            Принимайте взвешенное решение о покупке инвестиционной недвижимости{' '}
+            <span style={{ color: '#ffe1a2' }}>в Крыму</span>
           </h1>
 
           <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>
