@@ -6,24 +6,21 @@ const locations = [
   'Севастополь', 'Горнолыжные курорты',
 ];
 
-const bonuses = [
+const reasons = [
   {
-    num: '01',
-    title: 'Чек-лист «5 шагов к первой инвестиционной квартире»',
-    who: 'Для начинающих',
-    icon: 'ListChecks',
+    icon: 'TrendingUp',
+    title: 'Крым — единственный растущий рынок юга',
+    text: 'Пока Сочи стагнирует (-11% по апартаментам), в Ялте цены на сделки выросли на 25%, в Евпатории — на 26%. Мы покажем локации с потенциалом, а не перегретые.',
   },
   {
-    num: '02',
-    title: 'Сравнение доходности: квартира vs коммерция vs отель',
-    who: 'Для опытных',
-    icon: 'BarChart2',
+    icon: 'Building2',
+    title: '65% сделок — сервисные апартаменты под управлением',
+    text: 'Пассивный доход — тренд. Но слабая УК убивает доходность. В канале учим проверять операторов.',
   },
   {
-    num: '03',
-    title: 'Как сэкономить на налогах при покупке отельного номера',
-    who: 'Для крупных инвесторов',
-    icon: 'Receipt',
+    icon: 'Brain',
+    title: 'Психология инвестора: вы не один такой',
+    text: 'Да, вы хотите и доход, и красивый вид. Это нормально. Мы поможем найти баланс, чтобы не переплатить за эмоции в ущерб прибыли.',
   },
 ];
 
@@ -158,33 +155,22 @@ const AboutSection = () => {
       <div className="py-14 md:py-20 px-6 md:px-12" style={{ backgroundColor: '#18352e' }}>
         <div className="max-w-6xl mx-auto">
           <div className="reveal text-center mb-10">
-            <div className="section-label-white justify-center">Материалы</div>
-            <h3 className="text-heading" style={{ color: '#ffffff' }}>Что ещё важно знать?</h3>
-            <p className="text-body-lg mt-3 max-w-sm mx-auto" style={{ color: 'rgba(255,255,255,0.92)' }}>
-              Рекомендуем ознакомиться с этими материалами, прежде чем принимать решение о покупке
-            </p>
+            <div className="section-label-white justify-center">Подписка</div>
+            <h3 className="text-heading" style={{ color: '#ffffff' }}>Почему стоит подписаться именно сейчас</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-            {bonuses.map((b, i) => (
+            {reasons.map((r, i) => (
               <div
-                key={b.num}
-                className={`reveal reveal-d${i + 1} rounded-2xl p-6 border transition-all duration-200 hover:border-yellow-200/40`}
+                key={i}
+                className={`reveal reveal-d${i + 1} rounded-2xl p-6 border`}
                 style={{ backgroundColor: 'rgba(255,255,255,0.07)', borderColor: 'rgba(255,225,162,0.18)' }}
               >
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#ffe1a2' }}>
-                    <Icon name={b.icon} size={18} style={{ color: '#18352e' }} />
-                  </div>
-                  <span className="font-extrabold" style={{ color: 'rgba(255,225,162,0.25)', fontSize: '2rem', fontFamily: 'Mulish, sans-serif' }}>+{b.num}</span>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style={{ backgroundColor: '#ffe1a2' }}>
+                  <Icon name={r.icon} size={20} style={{ color: '#18352e' }} />
                 </div>
-                <h4 className="font-bold mb-3" style={{ color: '#ffffff', fontSize: '1rem', lineHeight: '1.5' }}>{b.title}</h4>
-                <span
-                  className="font-bold text-sm px-3 py-1 rounded-full"
-                  style={{ backgroundColor: 'rgba(255,225,162,0.15)', color: '#ffe1a2' }}
-                >
-                  {b.who}
-                </span>
+                <h4 className="font-bold mb-3" style={{ color: '#ffffff', fontSize: '1rem', lineHeight: '1.5' }}>{r.title}</h4>
+                <p className="text-body-lg" style={{ color: 'rgba(255,255,255,0.75)' }}>{r.text}</p>
               </div>
             ))}
           </div>
