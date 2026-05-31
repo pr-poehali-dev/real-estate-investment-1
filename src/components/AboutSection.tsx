@@ -114,29 +114,43 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Right — locations */}
-            <div className="reveal reveal-d2 rounded-2xl p-7 border-2" style={{ backgroundColor: '#f9f8f9', borderColor: '#e8f0f1' }}>
-              <div className="flex items-center gap-3 mb-6 pb-5" style={{ borderBottom: '1px solid #e8f0f1' }}>
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#18352e' }}>
-                  <Icon name="MapPin" size={16} style={{ color: '#ffe1a2' }} />
-                </div>
-                <span className="font-bold" style={{ color: '#18352e', fontSize: '1rem' }}>Наши локации</span>
-              </div>
-              <div className="space-y-1 mb-6">
-                {locations.map((loc) => (
-                  <div key={loc} className="flex items-center gap-3 py-2.5" style={{ borderBottom: '1px solid #f0f4f4' }}>
-                    <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#18352e' }} />
-                    <span className="font-medium text-body-lg" style={{ color: '#0d1f21' }}>{loc}</span>
+            {/* Right — mission */}
+            <div className="reveal reveal-d2 flex flex-col gap-5">
+              {/* История */}
+              <div className="rounded-2xl p-7 border" style={{ backgroundColor: '#18352e', borderColor: '#18352e' }}>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgba(255,225,162,0.15)' }}>
+                    <Icon name="Landmark" size={16} style={{ color: '#ffe1a2' }} />
                   </div>
-                ))}
+                  <span className="font-bold text-xs uppercase tracking-widest" style={{ color: '#ffe1a2' }}>Наша миссия</span>
+                </div>
+                <p className="text-body-lg mb-4" style={{ color: 'rgba(255,255,255,0.85)', lineHeight: '1.7' }}>
+                  100 лет назад купцы Стахеев, Голицын вкладывали капиталы в Крым — строили дворцы, винодельни, курорты. Их наследие живёт до сих пор.
+                </p>
+                <p className="text-body-lg" style={{ color: 'rgba(255,255,255,0.85)', lineHeight: '1.7' }}>
+                  Сегодня вы можете чувствовать себя так же. Вкладывая в современные апартаменты и отели на ЮБК, вы не просто получаете доход. Вы становитесь частью новой истории Крыма — возрождения его инвестиционной привлекательности и статуса.
+                </p>
               </div>
 
+              {/* Итоговый тезис */}
+              <div className="rounded-2xl p-7 border" style={{ backgroundColor: '#f9f8f9', borderColor: '#e8f0f1' }}>
+                <div className="flex items-start gap-4">
+                  <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5" style={{ backgroundColor: '#18352e' }}>
+                    <Icon name="Target" size={16} style={{ color: '#ffe1a2' }} />
+                  </div>
+                  <p className="font-bold" style={{ color: '#18352e', fontSize: 'clamp(1rem, 2vw, 1.2rem)', lineHeight: '1.5' }}>
+                    Инвестируйте с пониманием миссии. И с холодным расчётом.
+                  </p>
+                </div>
+              </div>
+
+              {/* Статистика */}
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { value: '10+', label: 'лет на рынке' },
                   { value: '200+', label: 'сделок закрыто' },
                 ].map((s) => (
-                  <div key={s.label} className="rounded-xl p-4 text-center" style={{ backgroundColor: '#18352e' }}>
+                  <div key={s.label} className="rounded-xl p-5 text-center" style={{ backgroundColor: '#18352e' }}>
                     <div className="font-extrabold" style={{ color: '#ffe1a2', fontSize: '1.8rem', fontFamily: 'Mulish, sans-serif' }}>{s.value}</div>
                     <div className="font-medium text-sm mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>{s.label}</div>
                   </div>
