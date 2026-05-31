@@ -44,7 +44,7 @@ const AboutSection = () => {
                 {/* Mobile layout */}
                 <div className="block sm:hidden">
                   {/* Center person — full width row */}
-                  {[{ src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта' }].map((person, i) => (
+                  {[{ src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/ef64867a-ae7c-416c-9a0c-5f84e39963a9.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта' }].map((person, i) => (
                     <div key={i} className="flex flex-col mb-3 mx-auto" style={{ maxWidth: '60%' }}>
                       <div className="rounded-2xl overflow-hidden aspect-[3/4]" style={{ borderColor: 'transparent', borderWidth: '2px', boxShadow: '0 0 0 2px #ffe1a2, 0 8px 40px rgba(255,225,162,0.45), 0 4px 20px rgba(24,53,46,0.2)' }}>
                         <img src={person.src} alt={person.name} className="w-full h-full object-cover object-top" />
@@ -58,8 +58,8 @@ const AboutSection = () => {
                   {/* Two others — side by side */}
                   <div className="grid grid-cols-2 gap-3">
                     {[
-                      { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f123d1ba-1f67-4f69-89d0-d5b9717749a2.jpg', name: 'Оксана Орлова', role: 'Эксперт по инвестиционной недвижимости' },
-                      { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта' },
+                      { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f5c71ae0-b209-4949-947c-6c672426de1b.jpg', name: 'Оксана Орлова', role: 'Эксперт по инвестиционной недвижимости' },
+                      { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/a2d4a102-a256-417e-958d-3f019bb13a4b.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта' },
                     ].map((person, i) => (
                       <div key={i} className="flex flex-col">
                         <div className="rounded-2xl overflow-hidden aspect-[3/4] border" style={{ borderColor: '#e8f0f1', borderWidth: '1px', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
@@ -76,9 +76,9 @@ const AboutSection = () => {
                 {/* Desktop layout — 3 columns */}
                 <div className="hidden sm:grid grid-cols-3 gap-3">
                   {[
-                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f123d1ba-1f67-4f69-89d0-d5b9717749a2.jpg', name: 'Оксана Орлова', role: 'Эксперт по инвестиционной недвижимости', center: false },
-                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/1ce77d57-1bcd-4abf-b8af-ac9f758614f7.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта', center: true },
-                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/56336e8a-99b5-4556-b333-5e472e6e5c69.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта', center: false },
+                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/f5c71ae0-b209-4949-947c-6c672426de1b.jpg', name: 'Оксана Орлова', role: 'Эксперт по инвестиционной недвижимости', center: false },
+                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/ef64867a-ae7c-416c-9a0c-5f84e39963a9.jpg', name: 'Михаил Корабельщиков', role: 'Эксперт и основатель проекта', center: true },
+                    { src: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/a2d4a102-a256-417e-958d-3f019bb13a4b.jpg', name: 'Александр Аверьянов', role: 'Эксперт по оптимизации, сооснователь проекта', center: false },
                   ].map((person, i) => (
                     <div key={i} className="flex flex-col">
                       <div
