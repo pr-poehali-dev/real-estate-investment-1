@@ -107,11 +107,7 @@ const AboutSection = () => {
               <p className="text-body-lg mb-6" style={{ color: '#1a3336' }}>
                 Осуществляем полное сопровождение на каждом этапе: от подбора объекта до организации сдачи в аренду в самых перспективных курортных локациях.
               </p>
-              <div className="rounded-xl p-5 border-l-4" style={{ backgroundColor: '#f9f8f9', borderLeftColor: '#18352e' }}>
-                <p className="font-semibold text-body-lg" style={{ color: '#18352e' }}>
-                  Инвестиции в курортную недвижимость — это не просто покупка, а стратегия по созданию капитала и пассивного дохода. В канале делимся цифрами, инсайдами и лотами, которые не найти в открытых источниках.
-                </p>
-              </div>
+
             </div>
 
             {/* Right — mission */}
