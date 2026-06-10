@@ -31,7 +31,7 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
             Принимайте взвешенное решение о покупке инвестиционной недвижимости{' '}
-            <span style={{ color: '#ffe1a2' }}>в Крыму</span>
+            <span style={{ color: '#ffe1a2' }}>в Крыму от 12млн.р.</span>
           </h1>
 
           <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Сообщество тех, кто вкладывает в Крым с умом и душой. Помогаем разобраться в доходных апартаментах и отелях Крыма, сравнить проекты, проверить УК, купить актив для пассивного дохода и личного отдыха</p>
