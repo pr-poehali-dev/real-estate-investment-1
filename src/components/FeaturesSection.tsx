@@ -23,9 +23,7 @@ const FeaturesSection = () => {
     <section className="py-16 md:py-24" style={{ backgroundColor: '#ffffff' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="reveal text-center mb-12">
-          <div className="section-label justify-center">Что вы получаете</div>
-          <h2 className="text-heading" style={{ color: '#18352e' }}>Честный канал об инвестициях в апарт-комплексы и гостиницы Крыма.</h2>
-          <p className="text-body-lg mt-4 max-w-md mx-auto" style={{ color: '#1a2e30' }}>Покупка апартаментов в Крыму — важное финансовое решение. Но проектов много, и у каждого — своя концепция, модель управления и окупаемости. Давайте сначала разберёмся в деталях, чтобы выбрать самый выгодный и надежный  вариант.</p>
+          <div className="section-label justify-center">Что вы узнаете в канале?</div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

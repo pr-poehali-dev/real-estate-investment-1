@@ -30,11 +30,11 @@ const HeroSection = () => {
       <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
         <div className="max-w-3xl">
           <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-            Принимайте взвешенное решение о покупке инвестиционной недвижимости{' '}
-            <span style={{ color: '#ffe1a2' }}>в Крыму от 12млн.р.</span>
+            Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
+            <span style={{ color: '#ffe1a2' }}>Крыма.</span>
           </h1>
 
-          <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Сообщество тех, кто вкладывает в Крым с умом и душой. Помогаем разобраться в доходных апартаментах и отелях Крыма, сравнить проекты, проверить УК, купить актив для пассивного дохода и личного отдыха</p>
+          <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
