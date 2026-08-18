@@ -4,14 +4,26 @@ import { reachGoal } from '@/lib/metrika';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
-      {/* Background image */}
+      {/* Background image (desktop) */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 hidden lg:block bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/6c6a1881-f056-4b5c-a7fb-1fc0043c5541.jpg')`,
         }}
       />
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(#2a221861 0%, #2a2218bf 100%)' }} />
+      <div className="absolute inset-0 hidden lg:block" style={{ background: 'linear-gradient(#2a221861 0%, #2a2218bf 100%)' }} />
+
+      {/* Background image (mobile) */}
+      <div
+        className="absolute inset-0 lg:hidden bg-cover bg-top bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/b38b2ea7-9675-4f37-a2ee-7fecab55d674.jpg')`,
+        }}
+      />
+      <div
+        className="absolute inset-0 lg:hidden"
+        style={{ background: 'linear-gradient(180deg, rgba(24,53,46,0.35) 0%, rgba(24,53,46,0.55) 30%, rgba(24,53,46,0.92) 60%, #18352e 82%)' }}
+      />
 
       {/* Nav */}
       <nav className="hero-nav relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
@@ -27,7 +39,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero content */}
-      <div className="relative z-10 flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
+      <div className="relative z-10 flex-1 flex items-end lg:items-center px-6 md:px-12 lg:px-20 pb-12 lg:pb-8 pt-4">
         <div className="w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
@@ -63,7 +75,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="w-full max-w-xs lg:max-w-sm flex-shrink-0">
+          <div className="hidden lg:block w-full max-w-xs lg:max-w-sm flex-shrink-0">
             <div
               className="rounded-2xl overflow-hidden shadow-2xl"
               style={{ border: '2px solid rgba(255,225,162,0.4)' }}
