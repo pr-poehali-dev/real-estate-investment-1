@@ -27,38 +27,53 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
-        <div className="max-w-3xl">
-          <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-            Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
-            <span style={{ color: '#ffe1a2' }}>Крыма.</span>
-          </h1>
+      <div className="relative z-10 flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-8 pt-4">
+        <div className="w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="max-w-3xl">
+            <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
+              Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
+              <span style={{ color: '#ffe1a2' }}>Крыма.</span>
+            </h1>
 
-          <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
+            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="https://max.ru/id631181836803_biz"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => reachGoal('hero_channel_click')}
-              className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://max.ru/id631181836803_biz"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => reachGoal('hero_channel_click')}
+                className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
+                style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
+              >
+                <Icon name="Send" size={16} />
+                Перейти в канал Мах
+              </a>
+              <a
+                href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => reachGoal('hero_chat_click')}
+                className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
+                style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
+              >
+                <Icon name="Zap" size={16} />
+                Перейти в Мах чат
+              </a>
+            </div>
+          </div>
+
+          <div className="w-full max-w-xs lg:max-w-sm flex-shrink-0">
+            <div
+              className="rounded-2xl overflow-hidden shadow-2xl"
+              style={{ border: '2px solid rgba(255,225,162,0.4)' }}
             >
-              <Icon name="Send" size={16} />
-              Перейти в канал Мах
-            </a>
-            <a
-              href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => reachGoal('hero_chat_click')}
-              className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
-              style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
-            >
-              <Icon name="Zap" size={16} />
-              Перейти в Мах чат
-            </a>
+              <img
+                src="https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/b38b2ea7-9675-4f37-a2ee-7fecab55d674.jpg"
+                alt="Автор канала"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
