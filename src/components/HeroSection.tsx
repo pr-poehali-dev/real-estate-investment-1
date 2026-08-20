@@ -60,11 +60,11 @@ const HeroSection = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-              Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
-              <span style={{ color: '#ffe1a2' }}>Крыма.</span>
+              Max канал о недвижимости для отдыха, жизни и инвестиций{' '}
+              <span style={{ color: '#ffe1a2' }}>в Крыму.</span>
             </h1>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
+            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в локациях, форматах заработка на недвижимости и особенностях Крыма.</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
