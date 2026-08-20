@@ -31,7 +31,7 @@ const HeroSection = () => {
 
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex items-end lg:items-center px-6 md:px-12 lg:px-20 pb-12 lg:pb-8 pt-4">
-        <div className="w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
               Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
@@ -63,19 +63,6 @@ const HeroSection = () => {
                 <Icon name="Zap" size={16} />
                 Перейти в Мах чат
               </a>
-            </div>
-          </div>
-
-          <div className="hidden lg:block w-full max-w-xs lg:max-w-sm flex-shrink-0">
-            <div
-              className="rounded-2xl overflow-hidden shadow-2xl"
-              style={{ border: '2px solid rgba(255,225,162,0.4)' }}
-            >
-              <img
-                src="https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/b38b2ea7-9675-4f37-a2ee-7fecab55d674.jpg"
-                alt="Автор канала"
-                className="w-full h-auto object-cover"
-              />
             </div>
           </div>
         </div>
