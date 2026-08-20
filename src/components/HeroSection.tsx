@@ -1,12 +1,38 @@
+import { useEffect, useRef } from 'react';
 import Icon from '@/components/ui/icon';
 import { reachGoal } from '@/lib/metrika';
 
 const HeroSection = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const updateParallax = () => {
+      if (bgRef.current) {
+        const offset = window.scrollY * 0.35;
+        bgRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
+      }
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        ref={bgRef}
+        className="absolute -inset-x-0 -top-20 -bottom-20 bg-cover bg-center bg-no-repeat will-change-transform"
         style={{
           backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/2c1ad30d-b169-4dec-8d01-f7f5b1cd2f7c.jpg')`,
         }}
