@@ -4,25 +4,16 @@ import { reachGoal } from '@/lib/metrika';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
-      {/* Background image (desktop) */}
+      {/* Background image */}
       <div
-        className="absolute inset-0 hidden lg:block bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/6c6a1881-f056-4b5c-a7fb-1fc0043c5541.jpg')`,
-        }}
-      />
-      <div className="absolute inset-0 hidden lg:block" style={{ background: 'linear-gradient(#2a221861 0%, #2a2218bf 100%)' }} />
-
-      {/* Background image (mobile) */}
-      <div
-        className="absolute inset-0 lg:hidden bg-cover bg-top bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/b38b2ea7-9675-4f37-a2ee-7fecab55d674.jpg')`,
+          backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/2c1ad30d-b169-4dec-8d01-f7f5b1cd2f7c.jpg')`,
         }}
       />
       <div
-        className="absolute inset-0 lg:hidden"
-        style={{ background: 'linear-gradient(180deg, rgba(24,53,46,0.35) 0%, rgba(24,53,46,0.55) 30%, rgba(24,53,46,0.92) 60%, #18352e 82%)' }}
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(180deg, rgba(24,53,46,0.55) 0%, rgba(24,53,46,0.7) 30%, rgba(24,53,46,0.93) 60%, #18352e 85%)' }}
       />
 
       {/* Nav */}
