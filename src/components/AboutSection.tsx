@@ -187,17 +187,6 @@ const AboutSection = () => {
               <Icon name="Send" size={16} />
               Перейти в канал Мах
             </a>
-            <a
-              href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => reachGoal('about_chat_click')}
-              className="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-xl border-2 transition-all duration-200 hover:opacity-80"
-              style={{ borderColor: '#ffe1a2', color: '#ffe1a2', fontSize: '0.95rem' }}
-            >
-              <Icon name="Zap" size={16} />
-              Перейти в Мах чат
-            </a>
           </div>
         </div>
       </div>
