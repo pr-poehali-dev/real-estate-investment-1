@@ -17,6 +17,17 @@ const FooterSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <a
+              href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => reachGoal('footer_chat_click')}
+              className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-lg border-2 transition-all duration-200 hover:opacity-80"
+              style={{ borderColor: '#18352e', color: '#18352e' }}
+            >
+              <Icon name="MessageCircle" size={14} />
+              Чат в Мах
+            </a>
+            <a
               href="https://max.ru/id631181836803_biz"
               target="_blank"
               rel="noopener noreferrer"
