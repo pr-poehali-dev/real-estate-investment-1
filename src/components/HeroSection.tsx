@@ -1,12 +1,38 @@
+import { useEffect, useRef } from 'react';
 import Icon from '@/components/ui/icon';
 import { reachGoal } from '@/lib/metrika';
 
 const HeroSection = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const updateParallax = () => {
+      if (bgRef.current) {
+        const offset = window.scrollY * 0.35;
+        bgRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
+      }
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
       {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        ref={bgRef}
+        className="absolute -inset-x-0 -top-20 -bottom-20 bg-cover bg-center bg-no-repeat will-change-transform"
         style={{
           backgroundImage: `url('https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/bucket/2c1ad30d-b169-4dec-8d01-f7f5b1cd2f7c.jpg')`,
         }}
@@ -34,11 +60,11 @@ const HeroSection = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-              Мах канал об инвестициях в апарт-комплексы и гостиницы{' '}
-              <span style={{ color: '#ffe1a2' }}>Крыма.</span>
+              Max канал о недвижимости для отдыха, жизни и инвестиций{' '}
+              <span style={{ color: '#ffe1a2' }}>в Крыму.</span>
             </h1>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
+            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в локациях, форматах заработка на недвижимости и особенностях Крыма.</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -51,17 +77,6 @@ const HeroSection = () => {
               >
                 <Icon name="Send" size={16} />
                 Перейти в канал Мах
-              </a>
-              <a
-                href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => reachGoal('hero_chat_click')}
-                className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
-                style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
-              >
-                <Icon name="Zap" size={16} />
-                Перейти в Мах чат
               </a>
             </div>
           </div>
