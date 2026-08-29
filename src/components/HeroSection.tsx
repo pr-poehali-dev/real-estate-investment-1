@@ -38,7 +38,7 @@ const HeroSection = () => {
               <span style={{ color: '#ffe1a2' }}>в Крыму</span>
             </h1>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Для тех, кто хочет принять взвешенное решение, разобравшись в концепциях, форматах управления, фин моделях и окупаемости.</p>
+            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Здесь мы честно разбираем доходность недвижимости Крыма. Без рекламных 20%.</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
