@@ -17,9 +17,16 @@ const items = [
 
 const TargetAudienceSection = () => {
   return (
-    <section className="py-16 md:py-24" style={{ backgroundColor: '#18352e' }}>
+    <section className="relative pt-16 pb-16 md:pt-24 md:pb-24" style={{ backgroundColor: '#122720' }}>
+      {/* Волна-разделитель со стороны Hero-блока */}
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none" style={{ transform: 'translateY(-99%)' }}>
+        <svg viewBox="0 0 1440 100" className="w-full h-14 md:h-20" preserveAspectRatio="none">
+          <path d="M0,30 C280,90 480,0 760,35 C1040,70 1220,10 1440,45 L1440,100 L0,100 Z" fill="#122720" />
+        </svg>
+      </div>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="reveal text-center mb-12">
+          <div className="section-label-white justify-center">Аудитория</div>
           <h2 className="text-heading" style={{ color: '#ffffff' }}>Для кого канал будет полезен</h2>
         </div>
 
