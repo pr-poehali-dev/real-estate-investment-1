@@ -39,6 +39,20 @@ const sections = [
       { icon: 'BarChart2', text: 'Сравнение локаций и аналитика недвижимости' },
     ],
   },
+  {
+    icon: 'Building2',
+    title: 'Экспертный разбор: инвестиции и управление',
+    wide: true,
+    items: [
+      { icon: 'TrendingUp', text: 'Капитализация недвижимости в Крыму. На что обратить внимание, чтобы не потерять деньги?' },
+      { icon: 'Volume2', text: 'Деньги любят тишину: как не отличить хайп от долгосрочного тренда?' },
+      { icon: 'Building2', text: 'Отельные операторы. Чем отличается франшиза от прямого управления?' },
+      { icon: 'Star', text: 'Отели 4* звезды — выбор инвесторов, кто смотрит на перспективы 5-10 лет' },
+      { icon: 'CalendarClock', text: 'Какие концепции отелей работают на вас даже в низкий сезон' },
+      { icon: 'AlertTriangle', text: 'Ловушка дисконта: почему «дешёвый» вход в проект на Юге — это очень дорогой способ потерять деньги' },
+      { icon: 'Calculator', text: 'Окупаемость 7 лет недвижимости. Что скрывается за этой цифрой и как посчитать реальные цифры самому?' },
+    ],
+  },
 ];
 
 const FeaturesSection = () => {
@@ -72,7 +86,7 @@ const FeaturesSection = () => {
           {sections.map((section, idx) => (
             <div
               key={idx}
-              className="reveal rounded-2xl p-8 border"
+              className={`reveal rounded-2xl p-8 border ${section.wide ? 'md:col-span-2' : ''}`}
               style={{ backgroundColor: '#f9f8f9', borderColor: '#e8f0f1' }}
             >
               <div className="flex items-center gap-3 mb-6">
