@@ -172,7 +172,7 @@ const AboutSectionVse = () => {
 
           <div className="text-center flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://max.ru/id631181836803_biz"
+              href="https://max.ru/channel_ybk"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => reachGoal('about_channel_click')}

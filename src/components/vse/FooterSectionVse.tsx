@@ -17,7 +17,7 @@ const FooterSectionVse = () => {
 
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <a
-              href="https://max.ru/id631181836803_biz"
+              href="https://max.ru/channel_ybk"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => reachGoal('footer_channel_click')}

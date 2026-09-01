@@ -28,7 +28,7 @@ const FooterSection = () => {
               Чат в Мах
             </a>
             <a
-              href="https://max.ru/id631181836803_biz"
+              href="https://max.ru/channel_ybk"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => reachGoal('footer_channel_click')}
