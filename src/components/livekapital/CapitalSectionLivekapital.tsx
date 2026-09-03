@@ -1,11 +1,11 @@
 import Icon from '@/components/ui/icon';
 
 const items = [
-  { icon: 'TrendingUp', title: 'Финансовый', text: 'рост цены, доходность' },
-  { icon: 'HeartHandshake', title: 'Эмоциональный', text: 'место силы, покой' },
-  { icon: 'Crown', title: 'Социальный', text: 'статус, престиж' },
-  { icon: 'Landmark', title: 'Культурный', text: 'история, наследие' },
-  { icon: 'Clock', title: 'Временной', text: 'быть здесь, а не просто владеть' },
+  { icon: 'TrendingUp', title: 'Финансовый капитал', text: 'рост цены, доходность' },
+  { icon: 'HeartHandshake', title: 'Эмоциональный капитал', text: 'место силы, покой' },
+  { icon: 'Crown', title: 'Социальный капитал', text: 'статус, престиж' },
+  { icon: 'Landmark', title: 'Культурный капитал', text: 'история, наследие' },
+  { icon: 'Clock', title: 'Временной капитал', text: 'быть здесь, а не просто владеть' },
 ];
 
 const CapitalSectionLivekapital = () => {
