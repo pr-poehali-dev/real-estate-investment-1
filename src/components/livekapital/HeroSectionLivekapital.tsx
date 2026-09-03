@@ -43,9 +43,7 @@ const HeroSectionLivekapital = () => {
               Бюджет: от 9 млн. Первый взнос: от 3 млн.
             </p>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>
-              Аналитика, обзоры ЖК, кейсы, история и личные ответы на вопросы. Разбираем доходность от покупки до сдачи в управление.
-            </p>
+            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Аналитика, обзоры ЖК, кейсы, история и личные ответы на вопросы. Помогаем зарабатывать на курортной недвижимости Крыма — от выбора объекта до прибыльного управления</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
