@@ -5,7 +5,7 @@ const items = [
   { icon: 'HeartHandshake', title: 'Эмоциональный', text: 'место силы, покой' },
   { icon: 'Crown', title: 'Социальный', text: 'статус, престиж' },
   { icon: 'Landmark', title: 'Культурный', text: 'история, наследие' },
-  { icon: 'Clock', title: 'Временной', text: 'жить здесь, а не владеть' },
+  { icon: 'Clock', title: 'Временной', text: 'быть здесь, а не просто владеть' },
 ];
 
 const CapitalSectionLivekapital = () => {
