@@ -1,4 +1,5 @@
 import HeroSectionLivekapital from '@/components/livekapital/HeroSectionLivekapital';
+import PurchaseOptionsSectionLivekapital from '@/components/livekapital/PurchaseOptionsSectionLivekapital';
 import CapitalSectionLivekapital from '@/components/livekapital/CapitalSectionLivekapital';
 import FeaturesSectionLivekapital from '@/components/livekapital/FeaturesSectionLivekapital';
 import CitiesSectionLivekapital from '@/components/livekapital/CitiesSectionLivekapital';
@@ -13,6 +14,7 @@ const Livekapital = () => {
   return (
     <main className="min-h-screen">
       <HeroSectionLivekapital />
+      <PurchaseOptionsSectionLivekapital />
       <CapitalSectionLivekapital />
       <FeaturesSectionLivekapital />
       <CitiesSectionLivekapital />
