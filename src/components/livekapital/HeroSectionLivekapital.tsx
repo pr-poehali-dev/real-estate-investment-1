@@ -5,7 +5,7 @@ const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 
 const HeroSectionLivekapital = () => {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
+    <section className="relative min-h-[90svh] lg:min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,7 +19,7 @@ const HeroSectionLivekapital = () => {
       />
 
       {/* Nav */}
-      <nav className="hero-nav relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
+      <nav className="hero-nav relative z-10 flex items-center justify-between px-6 md:px-12 py-4 md:py-6">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#ffe1a2' }}>
             <Icon name="Gem" size={16} style={{ color: '#18352e' }} />
@@ -31,19 +31,19 @@ const HeroSectionLivekapital = () => {
       </nav>
 
       {/* Hero content */}
-      <div className="relative z-10 flex-1 flex items-end lg:items-center px-6 md:px-12 lg:px-20 pb-12 lg:pb-8 pt-4">
+      <div className="relative z-10 flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-8 lg:pb-8 pt-2">
         <div className="w-full">
           <div className="max-w-3xl">
-            <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
+            <h1 className="hero-title text-display mb-4 md:mb-5" style={{ color: '#ffffff' }}>
               Канал о курортной недвижимости Крыма:{' '}
               <span style={{ color: '#ffe1a2' }}>для жизни и инвестиций</span>
             </h1>
 
-            <p className="hero-sub font-bold mb-4" style={{ color: '#ffe1a2', fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)' }}>
+            <p className="hero-sub font-bold mb-3 md:mb-4" style={{ color: '#ffe1a2', fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)' }}>
               Бюджет: от 9 млн. Первый взнос: от 3 млн.
             </p>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Аналитика, обзоры ЖК, кейсы, история и личные ответы на вопросы. Помогаем зарабатывать на курортной недвижимости Крыма — от выбора объекта до прибыльного управления</p>
+            <p className="hero-sub text-body-lg mb-6 md:mb-10 max-w-xl" style={{ color: '#ffffff' }}>Аналитика, обзоры ЖК, кейсы, история и личные ответы на вопросы. Помогаем зарабатывать на курортной недвижимости Крыма — от выбора объекта до прибыльного управления</p>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
