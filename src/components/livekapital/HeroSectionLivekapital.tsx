@@ -50,7 +50,7 @@ const HeroSectionLivekapital = () => {
                 href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => reachGoal('hero_channel_click')}
+                onClick={() => reachGoal('hero_channel_click2')}
                 className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
                 style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
               >

@@ -103,7 +103,7 @@ const AboutSectionLivekapital = () => {
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => reachGoal('about_channel_click')}
+              onClick={() => reachGoal('about_channel_click2')}
               className="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:opacity-90"
               style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
             >

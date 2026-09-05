@@ -1,4 +1,7 @@
 import Icon from '@/components/ui/icon';
+import { reachGoal } from '@/lib/metrika';
+
+const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 
 const options = [
   {
@@ -79,6 +82,20 @@ const PurchaseOptionsSectionLivekapital = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="reveal flex justify-center mt-10">
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => reachGoal('variant_channel_click')}
+            className="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
+            style={{ backgroundColor: '#18352e', color: '#ffe1a2', fontSize: '0.95rem' }}
+          >
+            <Icon name="Send" size={16} />
+            Подписаться на канал
+          </a>
         </div>
       </div>
     </section>
