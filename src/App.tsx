@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Vse from "./pages/Vse";
 import Kurort from "./pages/Kurort";
 import Livekapital from "./pages/Livekapital";
+import CrimeaMax from "./pages/CrimeaMax";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/vse" element={<Vse />} />
           <Route path="/kurort" element={<Kurort />} />
           <Route path="/livekapital" element={<Livekapital />} />
+          <Route path="/crimea-max" element={<CrimeaMax />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
