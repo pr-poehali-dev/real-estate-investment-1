@@ -35,8 +35,8 @@ const HeroSectionMax = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-4 md:mb-5" style={{ color: '#ffffff' }}>
-              Канал об инвестициях и покупке{' '}
-              <span style={{ color: '#ffe1a2' }}>курортной недвижимости в Крыму</span>
+              Канал для тех, кто планирует покупку{' '}
+              <span style={{ color: '#ffe1a2' }}>курортной недвижимости в Крыму</span>. Для жизни и инвестиций
             </h1>
 
             <p className="hero-sub text-body-lg mb-6 md:mb-10 max-w-xl" style={{ color: '#ffffff' }}>
