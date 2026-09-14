@@ -60,7 +60,7 @@ const HeroSectionVse = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-              Max канал о недвижимости для отдыха, жизни и инвестиций{' '}
+              Max канал о недвижимости для жизни и инвестиций{' '}
               <span style={{ color: '#ffe1a2' }}>в Крыму.</span>
             </h1>
 
