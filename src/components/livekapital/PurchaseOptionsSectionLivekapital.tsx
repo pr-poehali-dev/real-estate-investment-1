@@ -10,7 +10,6 @@ const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 const options = [
   {
     img: purchaseOption1,
-    imgFit: 'contain' as const,
     icon: 'Home',
     title: 'Квартира под семейную ипотеку',
     price: 'от 6 млн ₽',
@@ -61,22 +60,11 @@ const PurchaseOptionsSectionLivekapital = () => {
               className={`reveal reveal-d${(i % 4) + 1} rounded-2xl overflow-hidden border transition-all duration-200 hover:shadow-lg flex flex-col`}
               style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}
             >
-              <div
-                className="aspect-[16/9] overflow-hidden relative"
-                style={{ backgroundColor: '#e8f0f1' }}
-              >
-                {o.imgFit === 'contain' && (
-                  <img
-                    src={o.img}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70"
-                  />
-                )}
+              <div className="aspect-[16/9] overflow-hidden relative">
                 <img
                   src={o.img}
                   alt={o.title}
-                  className={`relative w-full h-full ${o.imgFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  className="w-full h-full object-cover"
                 />
                 <div
                   className="absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center"
