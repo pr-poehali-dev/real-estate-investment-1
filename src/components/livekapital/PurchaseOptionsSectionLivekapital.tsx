@@ -10,7 +10,6 @@ const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 const options = [
   {
     img: purchaseOption1,
-    imgPosition: 'center 30%',
     icon: 'Home',
     title: 'Квартира под семейную ипотеку',
     price: 'от 6 млн ₽',
