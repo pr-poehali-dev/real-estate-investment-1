@@ -3,12 +3,14 @@ import { reachGoal } from '@/lib/metrika';
 import purchaseOption1 from '@/assets/livekapital/purchase-option-1.jpg';
 import purchaseOption2 from '@/assets/livekapital/purchase-option-2.jpg';
 import purchaseOption3 from '@/assets/livekapital/purchase-option-3.jpg';
+import purchaseOption4 from '@/assets/livekapital/purchase-option-4.jpg';
 
 const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 
 const options = [
   {
     img: purchaseOption1,
+    imgFit: 'contain' as const,
     icon: 'Home',
     title: 'Квартира под семейную ипотеку',
     price: 'от 6 млн ₽',
@@ -32,7 +34,7 @@ const options = [
     text: 'Покупка апартаментов в комплексе. Вы сами решаете, сколько дней жить. В остальное время объект сдаётся через управляющую компанию и приносит доход.',
   },
   {
-    img: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/3a4793e6-b1e9-4de1-b006-395db3932138.jpg',
+    img: purchaseOption4,
     icon: 'Building2',
     title: 'Апартаменты с федеральным оператором',
     price: 'от 12 млн ₽',
@@ -59,8 +61,15 @@ const PurchaseOptionsSectionLivekapital = () => {
               className={`reveal reveal-d${(i % 4) + 1} rounded-2xl overflow-hidden border transition-all duration-200 hover:shadow-lg flex flex-col`}
               style={{ backgroundColor: '#ffffff', borderColor: '#e8f0f1' }}
             >
-              <div className="aspect-[16/9] overflow-hidden relative">
-                <img src={o.img} alt={o.title} className="w-full h-full object-cover" />
+              <div
+                className="aspect-[16/9] overflow-hidden relative"
+                style={{ backgroundColor: '#e8f0f1' }}
+              >
+                <img
+                  src={o.img}
+                  alt={o.title}
+                  className={`w-full h-full ${o.imgFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                />
                 <div
                   className="absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center"
                   style={{ backgroundColor: '#ffe1a2' }}
