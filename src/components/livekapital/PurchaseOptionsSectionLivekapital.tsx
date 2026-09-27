@@ -65,10 +65,18 @@ const PurchaseOptionsSectionLivekapital = () => {
                 className="aspect-[16/9] overflow-hidden relative"
                 style={{ backgroundColor: '#e8f0f1' }}
               >
+                {o.imgFit === 'contain' && (
+                  <img
+                    src={o.img}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70"
+                  />
+                )}
                 <img
                   src={o.img}
                   alt={o.title}
-                  className={`w-full h-full ${o.imgFit === 'contain' ? 'object-contain' : 'object-cover'}`}
+                  className={`relative w-full h-full ${o.imgFit === 'contain' ? 'object-contain' : 'object-cover'}`}
                 />
                 <div
                   className="absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center"
