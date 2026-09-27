@@ -1,11 +1,14 @@
 import Icon from '@/components/ui/icon';
 import { reachGoal } from '@/lib/metrika';
+import purchaseOption1 from '@/assets/livekapital/purchase-option-1.jpg';
+import purchaseOption2 from '@/assets/livekapital/purchase-option-2.jpg';
+import purchaseOption3 from '@/assets/livekapital/purchase-option-3.jpg';
 
 const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 
 const options = [
   {
-    img: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/5f5f3b14-f64b-4450-a9c5-be720855f1d0.jpg',
+    img: purchaseOption1,
     icon: 'Home',
     title: 'Квартира под семейную ипотеку',
     price: 'от 6 млн ₽',
@@ -13,7 +16,7 @@ const options = [
     text: 'Покупка квартиры для личного пользования и пассивного дохода. Подходит для тех, кто хочет совмещать отдых у моря с сдачей в аренду.',
   },
   {
-    img: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/11d4c309-7686-4107-a878-4c9e687b96f2.jpg',
+    img: purchaseOption2,
     icon: 'KeyRound',
     title: 'Квартира под самостоятельное управление',
     price: 'от 9 млн ₽',
@@ -21,7 +24,7 @@ const options = [
     text: 'Покупка квартиры, которую вы сдаёте сами (посуточно / долгосрочно) или используете для себя. Можно подключить УК для управления — мы подскажем проверенных.',
   },
   {
-    img: 'https://cdn.poehali.dev/projects/f9871ff2-932e-47eb-b9a4-ce2b9c4f26a9/files/e87e5d8a-b330-41c8-adc6-ec0b59837e2e.jpg',
+    img: purchaseOption3,
     icon: 'CalendarClock',
     title: 'Апартаменты со свободным графиком использования',
     price: 'от 10 млн ₽',
