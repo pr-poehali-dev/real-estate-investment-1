@@ -10,6 +10,7 @@ const TELEGRAM_URL = 'https://max.ru/channel_ybk';
 const options = [
   {
     img: purchaseOption1,
+    imgPosition: 'center 30%',
     icon: 'Home',
     title: 'Квартира под семейную ипотеку',
     price: 'от 6 млн ₽',
@@ -65,6 +66,7 @@ const PurchaseOptionsSectionLivekapital = () => {
                   src={o.img}
                   alt={o.title}
                   className="w-full h-full object-cover"
+                  style={o.imgPosition ? { objectPosition: o.imgPosition } : undefined}
                 />
                 <div
                   className="absolute top-4 left-4 w-11 h-11 rounded-xl flex items-center justify-center"
