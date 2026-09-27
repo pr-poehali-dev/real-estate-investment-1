@@ -35,8 +35,8 @@ const HeroSectionLivekapital = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-4 md:mb-5" style={{ color: '#ffffff' }}>
-              Канал о курортной недвижимости Крыма:{' '}
-              <span style={{ color: '#ffe1a2' }}>для жизни и инвестиций</span>
+              Канал для тех, кто планирует покупку курортной недвижимости в Крыму.{' '}
+              <span style={{ color: '#ffe1a2' }}>Для жизни и инвестиций</span>
             </h1>
 
             <p className="hero-sub font-bold mb-3 md:mb-4" style={{ color: '#ffe1a2', fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)' }}>Бюджет: от 6 млн. Первый взнос: от 2 млн.</p>
