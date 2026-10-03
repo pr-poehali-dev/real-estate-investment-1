@@ -1,5 +1,4 @@
 import Icon from '@/components/ui/icon';
-import { reachGoal } from '@/lib/metrika';
 
 const HeroSectionKrimekurort = () => {
   return (
@@ -34,36 +33,11 @@ const HeroSectionKrimekurort = () => {
         <div className="w-full">
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
-              Max канал о недвижимости для инвестиций{' '}
-              <span style={{ color: '#ffe1a2' }}>в Крыму</span>
+              Чат и сообщество для тех, кто планирует покупку курортной недвижимости{' '}
+              <span style={{ color: '#ffe1a2' }}>в Крыму от 6 млн</span>
             </h1>
 
-            <p className="hero-sub text-body-lg mb-10 max-w-xl" style={{ color: '#ffffff' }}>Здесь мы честно разбираем доходность недвижимости Крыма. Без рекламных 20%.  От покупки до сдачи в управление.</p>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://max.ru/channel_ybk"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => reachGoal('krimekurort_hero_channel_click')}
-                className="hero-btn-1 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:opacity-90"
-                style={{ backgroundColor: '#ffe1a2', color: '#18352e', fontSize: '0.95rem' }}
-              >
-                <Icon name="Send" size={16} />
-                Перейти в канал Мах
-              </a>
-              <a
-                href="https://max.ru/join/YEB9k3x3YAkcN6J9w4P8YSyXXbBnDPt-7So2wL1UZGc"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => reachGoal('krimekurort_hero_chat_click')}
-                className="hero-btn-2 inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:bg-white/10"
-                style={{ border: '2px solid rgba(255,255,255,0.5)', color: '#ffffff', fontSize: '0.95rem' }}
-              >
-                <Icon name="Zap" size={16} />
-                Перейти в Мах чат
-              </a>
-            </div>
+            <p className="hero-sub text-body-lg max-w-xl" style={{ color: '#ffffff' }}>Здесь вы сможете изучить локации и недвижимость Крыма, задать вопросы экспертам в чате и принять взвешенное решение о покупке — без давления и навязывания.</p>
           </div>
         </div>
       </div>
