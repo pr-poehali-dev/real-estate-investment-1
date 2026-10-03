@@ -34,7 +34,7 @@ const HeroSectionKrimekurort = () => {
           <div className="max-w-3xl">
             <h1 className="hero-title text-display mb-5" style={{ color: '#ffffff' }}>
               Чат и сообщество для тех, кто планирует покупку курортной недвижимости{' '}
-              <span style={{ color: '#ffe1a2' }}>в Крыму от 6 млн</span>
+              <span style={{ color: '#ffe1a2' }}>в Крыму</span>
             </h1>
 
             <p className="hero-sub text-body-lg max-w-xl" style={{ color: '#ffffff' }}>Здесь вы сможете изучить локации и недвижимость Крыма, задать вопросы экспертам в чате и принять взвешенное решение о покупке — без давления и навязывания.</p>
