@@ -34,7 +34,7 @@ const FeaturesSectionKrimekurort = () => {
         </div>
 
         <div className="flex justify-center">
-          <ButtonsKrimekurort prefix="features" />
+          <ButtonsKrimekurort prefix="block2" />
         </div>
       </div>
     </section>

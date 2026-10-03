@@ -28,7 +28,7 @@ const PrincipleSectionKrimekurort = () => {
         </p>
 
         <div className="flex justify-center">
-          <ButtonsKrimekurort prefix="principle" />
+          <ButtonsKrimekurort prefix="block4" />
         </div>
       </div>
     </section>
