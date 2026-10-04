@@ -1,5 +1,3 @@
-import Icon from '@/components/ui/icon';
-
 const HeroSectionKrimekurort = () => {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden" style={{ backgroundColor: '#18352e' }}>
@@ -15,18 +13,7 @@ const HeroSectionKrimekurort = () => {
         style={{ background: 'linear-gradient(180deg, rgba(24,53,46,0.55) 0%, rgba(24,53,46,0.7) 30%, rgba(24,53,46,0.93) 60%, #18352e 85%)' }}
       />
 
-      {/* Nav */}
-      <nav className="hero-nav relative z-10 flex items-center justify-between px-6 md:px-12 py-6">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#ffe1a2' }}>
-            <Icon name="TrendingUp" size={16} style={{ color: '#18352e' }} />
-          </div>
-          <span className="font-bold text-white" style={{ fontSize: '1.05rem' }}>
-            Южный Берег Капитала
-          </span>
-        </div>
-
-      </nav>
+      <div className="relative z-10 pt-6" />
 
       {/* Hero content */}
       <div className="relative z-10 flex-1 flex items-end lg:items-center px-6 md:px-12 lg:px-20 pb-12 lg:pb-8 pt-4">
